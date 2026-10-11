@@ -8,6 +8,9 @@ Last ned eller klon mappen og dobbeltklikk på `index.html`. Siden trenger ingen
 
 ## Innhold
 
+Siden er delt i egne deler i stedet for én lang side. Du bytter del med menyen øverst. Under «Kapitler» i menyen finner du hvert kapittel. I hvert kapittel kan du hoppe mellom kapitlene med tallknappene øverst, og nederst i hver del finner du «Forrige» og «Neste». Adressen endrer seg for hver del (for eksempel `index.html#kap5`), så tilbakeknappen virker, og du kan lagre lenker rett til en del.
+
+- **Forside:** toppbilde og valg av del
 - **Oversikt:** den røde tråden gjennom kapitlene og menneskets historie som ett døgn
 - **Kapittel 3–8:** sitat, kort oppsummering, hovedpunkter, før og etter, begreper og et drøftingsspørsmål
 - **Tidslinje:** filter per kapittel, hendelser du kan åpne, og en bryter for senere hendelser

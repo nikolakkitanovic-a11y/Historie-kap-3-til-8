@@ -21,16 +21,28 @@
   <header class="site-nav" id="toppmeny">
     <div class="site-nav__progress" aria-hidden="true"><span></span></div>
     <div class="site-nav__inner">
-      <a class="site-nav__brand" href="#topp">Fra jeger til filosof</a>
-      <p class="site-nav__current" aria-live="polite"><span class="visually-hidden">Du er her: </span><span data-current>Forsiden</span></p>
+      <a class="site-nav__brand" href="#forside">Fra jeger til filosof</a>
+      <p class="site-nav__current" aria-hidden="true" data-current>Forside</p>
       <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="menyliste">
         <span class="site-nav__toggle-icon" aria-hidden="true"></span>
         <span>Meny</span>
       </button>
-      <nav aria-label="Hovedmeny">
-        <ul class="site-nav__links" id="menyliste">
+      <nav aria-label="Hovedmeny" id="menyliste">
+        <ul class="site-nav__links">
+          <li class="site-nav__home"><a href="#forside" data-nav="forside">Forside</a></li>
           <li><a href="#oversikt" data-nav="oversikt">Oversikt</a></li>
-          <li><a href="#kapitler" data-nav="kapitler">Kapitler</a></li>
+          <li class="site-nav__group">
+            <button class="site-nav__group-btn" type="button" aria-expanded="false" aria-controls="kapittelmeny" data-nav="kapitler">Kapitler<span class="site-nav__chev" aria-hidden="true"></span></button>
+            <ul class="site-nav__sub" id="kapittelmeny">
+              <li><a href="#kapitler" data-nav-sub="kapitler"><span aria-hidden="true">·</span>Alle kapitler</a></li>
+              <li><a href="#kap3" data-nav-sub="kap3"><span>3</span>Livet som jegere og sankere</a></li>
+              <li><a href="#kap4" data-nav-sub="kap4"><span>4</span>Jordbruksrevolusjonen</a></li>
+              <li><a href="#kap5" data-nav-sub="kap5"><span>5</span>De første statene</a></li>
+              <li><a href="#kap6" data-nav-sub="kap6"><span>6</span>Teokrati</a></li>
+              <li><a href="#kap7" data-nav-sub="kap7"><span>7</span>Demokratiet i polisene</a></li>
+              <li><a href="#kap8" data-nav-sub="kap8"><span>8</span>Fra myter til fornuft</a></li>
+            </ul>
+          </li>
           <li><a href="#tidslinje" data-nav="tidslinje">Tidslinje</a></li>
           <li><a href="#begreper" data-nav="begreper">Begreper</a></li>
           <li><a href="#quiz" data-nav="quiz">Quiz</a></li>
@@ -40,95 +52,122 @@
     </div>
   </header>
 
-  <!-- ===================== TOPP ===================== -->
-  <section class="hero" id="topp" aria-labelledby="hero-tittel">
-    <div class="hero__scene" aria-hidden="true">
-      <div class="hero__sky"></div>
-      <svg class="hero__layer hero__layer--stars" data-depth="0.45" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
-        <g fill="#efe4cf"><circle cx="1023" cy="23" r="1" opacity="0.4"/><circle cx="223" cy="62" r="1.8" opacity="0.79"/><circle cx="139" cy="225" r="0.8" opacity="0.31"/><circle cx="372" cy="317" r="1.4" opacity="0.37"/><circle cx="1040" cy="288" r="1" opacity="0.52"/><circle cx="445" cy="453" r="1" opacity="0.67"/><circle cx="544" cy="89" r="1" opacity="0.31"/><circle cx="608" cy="193" r="1" opacity="0.61"/><circle cx="1291" cy="382" r="1.4" opacity="0.32"/><circle cx="1476" cy="50" r="1" opacity="0.75"/><circle cx="990" cy="449" r="1.4" opacity="0.37"/><circle cx="111" cy="347" r="1" opacity="0.84"/><circle cx="1369" cy="452" r="1.2" opacity="0.42"/><circle cx="1017" cy="196" r="1" opacity="0.46"/><circle cx="1072" cy="368" r="1.8" opacity="0.64"/><circle cx="975" cy="97" r="1.8" opacity="0.4"/><circle cx="740" cy="148" r="1.8" opacity="0.66"/><circle cx="351" cy="175" r="0.8" opacity="0.39"/><circle cx="51" cy="171" r="1" opacity="0.29"/><circle cx="1461" cy="299" r="1.8" opacity="0.44"/><circle cx="1049" cy="212" r="1.8" opacity="0.53"/><circle cx="424" cy="136" r="1.4" opacity="0.57"/><circle cx="1195" cy="229" r="1.4" opacity="0.49"/><circle cx="351" cy="519" r="1.4" opacity="0.55"/><circle cx="1209" cy="449" r="1" opacity="0.63"/><circle cx="1267" cy="225" r="0.8" opacity="0.48"/><circle cx="953" cy="249" r="1" opacity="0.83"/><circle cx="1377" cy="16" r="1.8" opacity="0.32"/><circle cx="1416" cy="393" r="1.8" opacity="0.45"/><circle cx="470" cy="91" r="0.8" opacity="0.82"/><circle cx="1401" cy="144" r="1.4" opacity="0.71"/><circle cx="812" cy="64" r="1.8" opacity="0.43"/><circle cx="1022" cy="321" r="1" opacity="0.47"/><circle cx="258" cy="496" r="1.4" opacity="0.8"/><circle cx="958" cy="259" r="0.8" opacity="0.81"/><circle cx="1406" cy="434" r="1" opacity="0.39"/><circle cx="385" cy="299" r="0.8" opacity="0.3"/><circle cx="778" cy="45" r="1.4" opacity="0.71"/><circle cx="205" cy="252" r="1.4" opacity="0.35"/><circle cx="844" cy="319" r="1" opacity="0.81"/><circle cx="1208" cy="362" r="1.8" opacity="0.44"/><circle cx="1592" cy="341" r="1.2" opacity="0.79"/><circle cx="722" cy="136" r="0.8" opacity="0.45"/><circle cx="941" cy="127" r="1" opacity="0.25"/><circle cx="1133" cy="40" r="0.8" opacity="0.79"/><circle cx="1375" cy="46" r="1" opacity="0.42"/><circle cx="777" cy="285" r="1.8" opacity="0.81"/><circle cx="914" cy="251" r="1.2" opacity="0.73"/><circle cx="305" cy="59" r="1.2" opacity="0.46"/><circle cx="658" cy="451" r="0.8" opacity="0.65"/><circle cx="1575" cy="60" r="1.2" opacity="0.69"/><circle cx="1281" cy="66" r="1" opacity="0.36"/><circle cx="718" cy="225" r="1" opacity="0.53"/><circle cx="1399" cy="48" r="1.4" opacity="0.31"/><circle cx="1043" cy="286" r="0.8" opacity="0.83"/><circle cx="1482" cy="443" r="1" opacity="0.49"/><circle cx="770" cy="451" r="0.8" opacity="0.35"/><circle cx="3" cy="209" r="1.2" opacity="0.42"/><circle cx="1115" cy="383" r="1.4" opacity="0.65"/><circle cx="779" cy="107" r="1" opacity="0.83"/><circle cx="927" cy="287" r="1.8" opacity="0.44"/><circle cx="80" cy="253" r="1.4" opacity="0.34"/><circle cx="1537" cy="51" r="1" opacity="0.29"/><circle cx="109" cy="450" r="1.2" opacity="0.32"/><circle cx="1424" cy="136" r="1.4" opacity="0.27"/><circle cx="131" cy="345" r="1.4" opacity="0.56"/><circle cx="1496" cy="114" r="1.8" opacity="0.44"/><circle cx="425" cy="77" r="1.8" opacity="0.43"/><circle cx="506" cy="393" r="0.8" opacity="0.26"/><circle cx="994" cy="297" r="0.8" opacity="0.29"/><circle cx="341" cy="145" r="1" opacity="0.78"/><circle cx="1407" cy="198" r="1" opacity="0.51"/><circle cx="869" cy="164" r="1.8" opacity="0.57"/><circle cx="1069" cy="293" r="1.8" opacity="0.31"/><circle cx="1405" cy="145" r="0.8" opacity="0.7"/><circle cx="249" cy="154" r="1" opacity="0.68"/><circle cx="326" cy="333" r="1" opacity="0.55"/><circle cx="402" cy="473" r="0.8" opacity="0.31"/><circle cx="678" cy="151" r="0.8" opacity="0.45"/><circle cx="209" cy="510" r="1" opacity="0.69"/><circle cx="883" cy="228" r="0.8" opacity="0.32"/><circle cx="1512" cy="362" r="1" opacity="0.58"/><circle cx="1335" cy="307" r="1" opacity="0.51"/><circle cx="67" cy="196" r="0.8" opacity="0.79"/><circle cx="336" cy="137" r="0.8" opacity="0.46"/><circle cx="896" cy="456" r="1.4" opacity="0.7"/><circle cx="1481" cy="131" r="1" opacity="0.84"/><circle cx="1297" cy="460" r="0.8" opacity="0.36"/><circle cx="1479" cy="409" r="1.2" opacity="0.73"/><circle cx="1383" cy="423" r="1" opacity="0.35"/></g>
-      </svg>
-      <svg class="hero__layer" data-depth="0.32" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
-        <defs>
-          <radialGradient id="sol" cx="50%" cy="50%" r="50%">
-            <stop offset="0" stop-color="#f0a46f" stop-opacity="0.95"/>
-            <stop offset="0.55" stop-color="#d9784a" stop-opacity="0.55"/>
-            <stop offset="1" stop-color="#b8582f" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <circle cx="1010" cy="640" r="260" fill="url(#sol)"/>
-        <circle cx="1010" cy="640" r="92" fill="#f2b07c" opacity="0.9"/>
-        <path fill="#3b2a22" d="M0 610 C 120 560 210 590 320 570 C 430 548 520 600 640 585 C 760 570 840 530 960 560 C 1080 590 1160 540 1280 552 C 1400 564 1500 600 1600 580 L1600 900 L0 900 Z"/>
-      </svg>
-      <svg class="hero__layer" data-depth="0.18" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
-        <defs>
-          <radialGradient id="baal" cx="50%" cy="50%" r="50%">
-            <stop offset="0" stop-color="#ffb070" stop-opacity="0.95"/>
-            <stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <g fill="#211915">
-          <!-- hule og klipper -->
-          <path d="M0 470 C 60 455 120 470 170 505 C 215 538 250 600 270 700 L0 700 Z"/>
-          <!-- kornaks -->
-          <g stroke="#211915" stroke-width="4" stroke-linecap="round" fill="none">
-            <path d="M318 700 C 318 660 322 630 330 600"/>
-            <path d="M344 700 C 346 655 352 625 362 590"/>
-            <path d="M372 700 C 372 662 376 640 384 612"/>
-            <path d="M398 700 C 400 664 406 640 414 618"/>
-          </g>
-          <ellipse cx="331" cy="590" rx="6" ry="16" transform="rotate(12 331 590)"/>
-          <ellipse cx="364" cy="578" rx="6" ry="17" transform="rotate(16 364 578)"/>
-          <ellipse cx="386" cy="601" rx="5" ry="15" transform="rotate(14 386 601)"/>
-          <ellipse cx="416" cy="607" rx="5" ry="14" transform="rotate(18 416 607)"/>
-          <!-- ziggurat -->
-          <path d="M500 700 L500 664 L540 664 L540 628 L580 628 L580 594 L620 594 L620 566 L700 566 L700 594 L740 594 L740 628 L780 628 L780 664 L820 664 L820 700 Z"/>
-          <rect x="648" y="540" width="24" height="26"/>
-          <!-- pyramider -->
-          <path d="M860 700 L1000 520 L1140 700 Z"/>
-          <path d="M1070 700 L1135 618 L1200 700 Z"/>
-          <!-- gresk tempel -->
-          <path d="M1262 590 L1388 548 L1514 590 Z"/>
-          <rect x="1256" y="590" width="264" height="14"/>
-          <g>
-            <rect x="1270" y="604" width="13" height="78"/>
-            <rect x="1302" y="604" width="13" height="78"/>
-            <rect x="1334" y="604" width="13" height="78"/>
-            <rect x="1366" y="604" width="13" height="78"/>
-            <rect x="1398" y="604" width="13" height="78"/>
-            <rect x="1430" y="604" width="13" height="78"/>
-            <rect x="1462" y="604" width="13" height="78"/>
-            <rect x="1494" y="604" width="13" height="78"/>
-          </g>
-          <rect x="1250" y="682" width="276" height="9"/>
-          <rect x="1240" y="691" width="296" height="9"/>
-          <path d="M0 700 L1600 700 L1600 900 L0 900 Z"/>
-        </g>
-        <circle cx="205" cy="672" r="46" fill="url(#baal)"/>
-        <path d="M196 690 L205 662 L214 690 Z" fill="#ffc48a"/>
-      </svg>
-      <svg class="hero__layer" data-depth="0.06" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
-        <path fill="#110e0c" d="M0 760 C 180 730 330 770 520 752 C 720 734 860 780 1060 760 C 1260 740 1420 770 1600 748 L1600 900 L0 900 Z"/>
-      </svg>
-      <div class="hero__grain"></div>
-      <div class="hero__shade"></div>
-    </div>
 
-    <div class="hero__content wrap">
-      <p class="kicker kicker--light">Historie · kapittel 3–8</p>
-      <h1 class="hero__title" id="hero-tittel">Fra jeger til <em>filosof</em></h1>
-      <p class="hero__lede">Hvordan små grupper av jegere og sankere ble til bønder, byer og stater, styrt av gudekonger, borgere og etter hvert fornuften. Her finner du oppsummering, tidslinje, begreper, quiz og presentasjon.</p>
-      <div class="hero__actions">
-        <a class="btn btn--accent" href="#oversikt">Start repetisjonen</a>
-        <button class="btn btn--ghost" type="button" data-open-slides="0">Åpne presentasjonen</button>
-      </div>
-    </div>
-    <a class="hero__scroll" href="#oversikt"><span class="visually-hidden">Gå til oversikten</span><span aria-hidden="true"></span></a>
-  </section>
 
   <main id="innhold" tabindex="-1">
+    <!-- ===================== FORSIDE ===================== -->
+    <div class="view" id="forside" data-view data-title="Forside">
+    <!-- ===================== TOPP ===================== -->
+    <section class="hero" aria-labelledby="hero-tittel">
+      <div class="hero__scene" aria-hidden="true">
+        <div class="hero__sky"></div>
+        <svg class="hero__layer hero__layer--stars" data-depth="0.45" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+          <g fill="#efe4cf"><circle cx="1023" cy="23" r="1" opacity="0.4"/><circle cx="223" cy="62" r="1.8" opacity="0.79"/><circle cx="139" cy="225" r="0.8" opacity="0.31"/><circle cx="372" cy="317" r="1.4" opacity="0.37"/><circle cx="1040" cy="288" r="1" opacity="0.52"/><circle cx="445" cy="453" r="1" opacity="0.67"/><circle cx="544" cy="89" r="1" opacity="0.31"/><circle cx="608" cy="193" r="1" opacity="0.61"/><circle cx="1291" cy="382" r="1.4" opacity="0.32"/><circle cx="1476" cy="50" r="1" opacity="0.75"/><circle cx="990" cy="449" r="1.4" opacity="0.37"/><circle cx="111" cy="347" r="1" opacity="0.84"/><circle cx="1369" cy="452" r="1.2" opacity="0.42"/><circle cx="1017" cy="196" r="1" opacity="0.46"/><circle cx="1072" cy="368" r="1.8" opacity="0.64"/><circle cx="975" cy="97" r="1.8" opacity="0.4"/><circle cx="740" cy="148" r="1.8" opacity="0.66"/><circle cx="351" cy="175" r="0.8" opacity="0.39"/><circle cx="51" cy="171" r="1" opacity="0.29"/><circle cx="1461" cy="299" r="1.8" opacity="0.44"/><circle cx="1049" cy="212" r="1.8" opacity="0.53"/><circle cx="424" cy="136" r="1.4" opacity="0.57"/><circle cx="1195" cy="229" r="1.4" opacity="0.49"/><circle cx="351" cy="519" r="1.4" opacity="0.55"/><circle cx="1209" cy="449" r="1" opacity="0.63"/><circle cx="1267" cy="225" r="0.8" opacity="0.48"/><circle cx="953" cy="249" r="1" opacity="0.83"/><circle cx="1377" cy="16" r="1.8" opacity="0.32"/><circle cx="1416" cy="393" r="1.8" opacity="0.45"/><circle cx="470" cy="91" r="0.8" opacity="0.82"/><circle cx="1401" cy="144" r="1.4" opacity="0.71"/><circle cx="812" cy="64" r="1.8" opacity="0.43"/><circle cx="1022" cy="321" r="1" opacity="0.47"/><circle cx="258" cy="496" r="1.4" opacity="0.8"/><circle cx="958" cy="259" r="0.8" opacity="0.81"/><circle cx="1406" cy="434" r="1" opacity="0.39"/><circle cx="385" cy="299" r="0.8" opacity="0.3"/><circle cx="778" cy="45" r="1.4" opacity="0.71"/><circle cx="205" cy="252" r="1.4" opacity="0.35"/><circle cx="844" cy="319" r="1" opacity="0.81"/><circle cx="1208" cy="362" r="1.8" opacity="0.44"/><circle cx="1592" cy="341" r="1.2" opacity="0.79"/><circle cx="722" cy="136" r="0.8" opacity="0.45"/><circle cx="941" cy="127" r="1" opacity="0.25"/><circle cx="1133" cy="40" r="0.8" opacity="0.79"/><circle cx="1375" cy="46" r="1" opacity="0.42"/><circle cx="777" cy="285" r="1.8" opacity="0.81"/><circle cx="914" cy="251" r="1.2" opacity="0.73"/><circle cx="305" cy="59" r="1.2" opacity="0.46"/><circle cx="658" cy="451" r="0.8" opacity="0.65"/><circle cx="1575" cy="60" r="1.2" opacity="0.69"/><circle cx="1281" cy="66" r="1" opacity="0.36"/><circle cx="718" cy="225" r="1" opacity="0.53"/><circle cx="1399" cy="48" r="1.4" opacity="0.31"/><circle cx="1043" cy="286" r="0.8" opacity="0.83"/><circle cx="1482" cy="443" r="1" opacity="0.49"/><circle cx="770" cy="451" r="0.8" opacity="0.35"/><circle cx="3" cy="209" r="1.2" opacity="0.42"/><circle cx="1115" cy="383" r="1.4" opacity="0.65"/><circle cx="779" cy="107" r="1" opacity="0.83"/><circle cx="927" cy="287" r="1.8" opacity="0.44"/><circle cx="80" cy="253" r="1.4" opacity="0.34"/><circle cx="1537" cy="51" r="1" opacity="0.29"/><circle cx="109" cy="450" r="1.2" opacity="0.32"/><circle cx="1424" cy="136" r="1.4" opacity="0.27"/><circle cx="131" cy="345" r="1.4" opacity="0.56"/><circle cx="1496" cy="114" r="1.8" opacity="0.44"/><circle cx="425" cy="77" r="1.8" opacity="0.43"/><circle cx="506" cy="393" r="0.8" opacity="0.26"/><circle cx="994" cy="297" r="0.8" opacity="0.29"/><circle cx="341" cy="145" r="1" opacity="0.78"/><circle cx="1407" cy="198" r="1" opacity="0.51"/><circle cx="869" cy="164" r="1.8" opacity="0.57"/><circle cx="1069" cy="293" r="1.8" opacity="0.31"/><circle cx="1405" cy="145" r="0.8" opacity="0.7"/><circle cx="249" cy="154" r="1" opacity="0.68"/><circle cx="326" cy="333" r="1" opacity="0.55"/><circle cx="402" cy="473" r="0.8" opacity="0.31"/><circle cx="678" cy="151" r="0.8" opacity="0.45"/><circle cx="209" cy="510" r="1" opacity="0.69"/><circle cx="883" cy="228" r="0.8" opacity="0.32"/><circle cx="1512" cy="362" r="1" opacity="0.58"/><circle cx="1335" cy="307" r="1" opacity="0.51"/><circle cx="67" cy="196" r="0.8" opacity="0.79"/><circle cx="336" cy="137" r="0.8" opacity="0.46"/><circle cx="896" cy="456" r="1.4" opacity="0.7"/><circle cx="1481" cy="131" r="1" opacity="0.84"/><circle cx="1297" cy="460" r="0.8" opacity="0.36"/><circle cx="1479" cy="409" r="1.2" opacity="0.73"/><circle cx="1383" cy="423" r="1" opacity="0.35"/></g>
+        </svg>
+        <svg class="hero__layer" data-depth="0.32" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+          <defs>
+            <radialGradient id="sol" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#f0a46f" stop-opacity="0.95"/>
+              <stop offset="0.55" stop-color="#d9784a" stop-opacity="0.55"/>
+              <stop offset="1" stop-color="#b8582f" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="1010" cy="640" r="260" fill="url(#sol)"/>
+          <circle cx="1010" cy="640" r="92" fill="#f2b07c" opacity="0.9"/>
+          <path fill="#3b2a22" d="M0 610 C 120 560 210 590 320 570 C 430 548 520 600 640 585 C 760 570 840 530 960 560 C 1080 590 1160 540 1280 552 C 1400 564 1500 600 1600 580 L1600 900 L0 900 Z"/>
+        </svg>
+        <svg class="hero__layer" data-depth="0.18" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+          <defs>
+            <radialGradient id="baal" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#ffb070" stop-opacity="0.95"/>
+              <stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <g fill="#211915">
+            <!-- hule og klipper -->
+            <path d="M0 470 C 60 455 120 470 170 505 C 215 538 250 600 270 700 L0 700 Z"/>
+            <!-- kornaks -->
+            <g stroke="#211915" stroke-width="4" stroke-linecap="round" fill="none">
+              <path d="M318 700 C 318 660 322 630 330 600"/>
+              <path d="M344 700 C 346 655 352 625 362 590"/>
+              <path d="M372 700 C 372 662 376 640 384 612"/>
+              <path d="M398 700 C 400 664 406 640 414 618"/>
+            </g>
+            <ellipse cx="331" cy="590" rx="6" ry="16" transform="rotate(12 331 590)"/>
+            <ellipse cx="364" cy="578" rx="6" ry="17" transform="rotate(16 364 578)"/>
+            <ellipse cx="386" cy="601" rx="5" ry="15" transform="rotate(14 386 601)"/>
+            <ellipse cx="416" cy="607" rx="5" ry="14" transform="rotate(18 416 607)"/>
+            <!-- ziggurat -->
+            <path d="M500 700 L500 664 L540 664 L540 628 L580 628 L580 594 L620 594 L620 566 L700 566 L700 594 L740 594 L740 628 L780 628 L780 664 L820 664 L820 700 Z"/>
+            <rect x="648" y="540" width="24" height="26"/>
+            <!-- pyramider -->
+            <path d="M860 700 L1000 520 L1140 700 Z"/>
+            <path d="M1070 700 L1135 618 L1200 700 Z"/>
+            <!-- gresk tempel -->
+            <path d="M1262 590 L1388 548 L1514 590 Z"/>
+            <rect x="1256" y="590" width="264" height="14"/>
+            <g>
+              <rect x="1270" y="604" width="13" height="78"/>
+              <rect x="1302" y="604" width="13" height="78"/>
+              <rect x="1334" y="604" width="13" height="78"/>
+              <rect x="1366" y="604" width="13" height="78"/>
+              <rect x="1398" y="604" width="13" height="78"/>
+              <rect x="1430" y="604" width="13" height="78"/>
+              <rect x="1462" y="604" width="13" height="78"/>
+              <rect x="1494" y="604" width="13" height="78"/>
+            </g>
+            <rect x="1250" y="682" width="276" height="9"/>
+            <rect x="1240" y="691" width="296" height="9"/>
+            <path d="M0 700 L1600 700 L1600 900 L0 900 Z"/>
+          </g>
+          <circle cx="205" cy="672" r="46" fill="url(#baal)"/>
+          <path d="M196 690 L205 662 L214 690 Z" fill="#ffc48a"/>
+        </svg>
+        <svg class="hero__layer" data-depth="0.06" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" focusable="false">
+          <path fill="#110e0c" d="M0 760 C 180 730 330 770 520 752 C 720 734 860 780 1060 760 C 1260 740 1420 770 1600 748 L1600 900 L0 900 Z"/>
+        </svg>
+        <div class="hero__grain"></div>
+        <div class="hero__shade"></div>
+      </div>
+
+      <div class="hero__content wrap">
+        <p class="kicker kicker--light">Historie · kapittel 3–8</p>
+        <h1 class="hero__title" id="hero-tittel">Fra jeger til <em>filosof</em></h1>
+        <p class="hero__lede">Hvordan små grupper av jegere og sankere ble til bønder, byer og stater, styrt av gudekonger, borgere og etter hvert fornuften. Her finner du oppsummering, tidslinje, begreper, quiz og presentasjon.</p>
+        <div class="hero__actions">
+          <a class="btn btn--accent" href="#oversikt">Start repetisjonen</a>
+          <button class="btn btn--ghost" type="button" data-open-slides="0">Åpne presentasjonen</button>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#velg"><span class="visually-hidden">Gå til innholdet</span><span aria-hidden="true"></span></a>
+    </section>
+
+      <section class="section hub" id="velg" aria-labelledby="velg-tittel">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="kicker">Innhold</p>
+            <h2 id="velg-tittel">Velg hvor du vil begynne</h2>
+            <p class="section-head__lede">Siden er delt i seks deler. Bruk menyen øverst, eller velg en del her.</p>
+          </header>
+          <ul class="hub-grid reveal">
+            <li><a class="hub-card" href="#oversikt"><span class="hub-card__num">01</span><span class="hub-card__title">Oversikt</span><span class="hub-card__text">Den røde tråden gjennom kapitlene og menneskets historie som ett døgn.</span></a></li>
+            <li><a class="hub-card" href="#kapitler"><span class="hub-card__num">02</span><span class="hub-card__title">Kapitlene</span><span class="hub-card__text">Seks kapitler med oppsummering, hovedpunkter, begreper og drøfting.</span></a></li>
+            <li><a class="hub-card" href="#tidslinje"><span class="hub-card__num">03</span><span class="hub-card__title">Tidslinje</span><span class="hub-card__text">Hendelsene fra 300 000 år siden til antikken, med filter per kapittel.</span></a></li>
+            <li><a class="hub-card" href="#begreper"><span class="hub-card__num">04</span><span class="hub-card__title">Begreper</span><span class="hub-card__text">Søkbar ordliste med øvemodus der forklaringene er skjult.</span></a></li>
+            <li><a class="hub-card" href="#quiz"><span class="hub-card__num">05</span><span class="hub-card__title">Quiz</span><span class="hub-card__text">Fem spørsmål per kapittel, med forklaring etter hvert svar.</span></a></li>
+            <li><a class="hub-card" href="#presentasjon"><span class="hub-card__num">06</span><span class="hub-card__title">Presentasjon</span><span class="hub-card__text">Tolv lysbilder i fullskjerm til repetisjon eller framføring.</span></a></li>
+          </ul>
+          <div class="hub-chapters reveal">
+            <p class="label">Rett til et kapittel</p>
+            <ul class="chapter-pills"><li><a href="#kap3"><span>3</span>Livet som jegere og sankere</a></li><li><a href="#kap4"><span>4</span>Jordbruksrevolusjonen</a></li><li><a href="#kap5"><span>5</span>De første statene</a></li><li><a href="#kap6"><span>6</span>Teokrati</a></li><li><a href="#kap7"><span>7</span>Demokratiet i polisene</a></li><li><a href="#kap8"><span>8</span>Fra myter til fornuft</a></li></ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
 
     <!-- ===================== OVERSIKT ===================== -->
-    <section class="section" id="oversikt" aria-labelledby="oversikt-tittel">
+    <section class="view section" id="oversikt" data-view data-title="Oversikt" aria-labelledby="oversikt-tittel">
       <div class="wrap">
         <header class="section-head reveal">
           <p class="kicker">01 · Oversikt</p>
@@ -215,609 +254,608 @@
     </section>
 
     <!-- ===================== KAPITLER ===================== -->
-    <section class="section section--chapters" id="kapitler" aria-labelledby="kapitler-tittel">
+    <section class="view section section--chapters" id="kapitler" data-view data-title="Kapitlene" aria-labelledby="kapitler-tittel">
       <div class="wrap">
         <header class="section-head reveal">
           <p class="kicker">02 · Kapitlene</p>
           <h2 id="kapitler-tittel">Seks kapitler, ett utstillingsrom hver</h2>
-          <p class="section-head__lede">Hvert kapittel har et sitat fra boken, en kort oppsummering, hovedpunktene, hva som skjedde før og etter, de viktigste begrepene og et spørsmål å drøfte.</p>
+          <p class="section-head__lede">Velg et kapittel. Hvert kapittel har et sitat fra boken, en kort oppsummering, hovedpunktene, hva som skjedde før og etter, de viktigste begrepene og et spørsmål å drøfte.</p>
         </header>
 
-        <nav class="chapter-index reveal" aria-label="Kapitler">
-          <ul>
-            <li><a href="#kap3"><span>3</span>Livet som jegere og sankere</a></li>
-            <li><a href="#kap4"><span>4</span>Jordbruksrevolusjonen</a></li>
-            <li><a href="#kap5"><span>5</span>De første statene</a></li>
-            <li><a href="#kap6"><span>6</span>Teokrati</a></li>
-            <li><a href="#kap7"><span>7</span>Demokratiet i polisene</a></li>
-            <li><a href="#kap8"><span>8</span>Fra mytologiske til rasjonelle forklaringer</a></li>
-          </ul>
-        </nav>
+        <ul class="chapter-cards reveal">
+            <li><a class="chapter-card" href="#kap3"><span class="chapter-card__num">3</span><span class="chapter-card__body"><span class="chapter-card__title">Livet som jegere og sankere</span><span class="chapter-card__text">Små grupper som flyttet etter maten, og de første menneskene i Norge.</span><span class="chapter-card__pages">Kapittel 3 · s. 18–21</span></span></a></li>
+            <li><a class="chapter-card" href="#kap4"><span class="chapter-card__num">4</span><span class="chapter-card__body"><span class="chapter-card__title">Jordbruksrevolusjonen</span><span class="chapter-card__text">Overgangen til jordbruk, og hva den ga og kostet.</span><span class="chapter-card__pages">Kapittel 4 · s. 22–28</span></span></a></li>
+            <li><a class="chapter-card" href="#kap5"><span class="chapter-card__num">5</span><span class="chapter-card__body"><span class="chapter-card__title">De første statene</span><span class="chapter-card__text">Overskudd, prester, skrift og lover i Mesopotamia.</span><span class="chapter-card__pages">Kapittel 5 · s. 29–33</span></span></a></li>
+            <li><a class="chapter-card" href="#kap6"><span class="chapter-card__num">6</span><span class="chapter-card__body"><span class="chapter-card__title">Teokrati</span><span class="chapter-card__text">Når makten begrunnes med religion, fra farao til Iran.</span><span class="chapter-card__pages">Kapittel 6 · s. 34–37</span></span></a></li>
+            <li><a class="chapter-card" href="#kap7"><span class="chapter-card__num">7</span><span class="chapter-card__body"><span class="chapter-card__title">Demokratiet i polisene</span><span class="chapter-card__text">Folkestyret i Aten, og hvem som fikk være med.</span><span class="chapter-card__pages">Kapittel 7 · s. 44–49</span></span></a></li>
+            <li><a class="chapter-card" href="#kap8"><span class="chapter-card__num">8</span><span class="chapter-card__body"><span class="chapter-card__title">Fra mytologiske til rasjonelle forklaringer</span><span class="chapter-card__text">Greske tenkere som forklarte verden med fornuft.</span><span class="chapter-card__pages">Kapittel 8 · s. 50–55</span></span></a></li>
+        </ul>
       </div>
-
-      <!-- ===== KAPITTEL 3 ===== -->
-      <article class="chapter" id="kap3" aria-labelledby="kap3-tittel" data-label="Kapittel 3 · Jegere og sankere">
-        <div class="wrap chapter__grid">
-          <div class="chapter__plate">
-            <p class="chapter__num" aria-hidden="true">03</p>
-            <p class="kicker">Kapittel 3 · s. 18–21</p>
-            <h3 class="chapter__title" id="kap3-tittel">Livet som jegere og sankere</h3>
-            <figure class="plate-figure reveal">
-              <img src="bilder/altamira-bison.jpg" width="1024" height="810" loading="lazy" decoding="async" alt="Hulemaleri av en bison i rødbrune og svarte farger på en ujevn steinvegg.">
-              <figcaption>Hulemaleri fra Altamira i Nord-Spania, om lag 15 000 år gammelt.</figcaption>
-            </figure>
-          </div>
-
-          <div class="chapter__body">
-            <figure class="quote reveal">
-              <blockquote><p>«… i mesteparten av menneskets historie har folk levd av å jakte og sanke ville dyr og planter.»</p></blockquote>
-              <figcaption>Carol R. Ember, amerikansk antropolog</figcaption>
-            </figure>
-
-            <h4 class="label">Kort fortalt</h4>
-            <p class="lede reveal">For om lag 11 800 år siden slo en liten gruppe mennesker seg ned ved Pauler gård i Brunlanes, nær dagens Larvik. Boplassen er en av de eldste som er funnet i Norge, og arkeologene har funnet rundt 20 000 gjenstander der. Gruppen levde slik mennesker har levd i nesten hele sin historie: som jegere og sankere.</p>
-
-            <h4 class="label">Hovedpunkter</h4>
-            <div class="points">
-              <section class="point reveal">
-                <h5>Livet ved kysten</h5>
-                <p>Alle boplassene fra eldre steinalder i Norge ligger ved kysten, fordi de er fra slutten av istiden. Først for om lag 9000 år siden smeltet isen for alvor, og folk tok seg inn i landet. Pionerene i Brunlanes etterlot seg flint, som ikke finnes naturlig i Norge. Derfor kom de trolig fra Sør-Skandinavia eller kontinentet.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Små grupper på vandring</h5>
-                <p>Jegere må følge dyrene, og da er det upraktisk å være mange. Gruppene fikk trolig få barn, fordi det er vanskelig å bære mange små barn over lange strekninger. De eide bare det de trengte.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Alle kunne mye om alt</h5>
-                <p>De fleste voksne kjente til mellom 200 og 300 nyttevekster. Kunnskapen var jevnt fordelt, og spesialiseringen var lav. Gruppen kunne ikke være avhengig av én person: Hva om den eneste som kunne lage pilspisser, døde under jakten?</p>
-              </section>
-              <section class="point reveal">
-                <h5>Kjønnsroller</h5>
-                <p>Arkeologen Ingrid Fuglestvedt mener kunnskapen var ganske likt fordelt mellom kvinner og menn. Menn jaktet trolig mest storvilt, men en kvinnegrav i Skåne fra 7000-tallet f.Kr. tyder på at kvinnen var storviltjeger. Rollene var mindre skarpe enn i de senere jordbrukssamfunnene.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Megafaunaen forsvant</h5>
-                <p>Da mennesket kom til Europa og Asia, levde det mammut, kjempehjort, hulebjørn og mange andre store dyr der. Nesten alle døde ut. Klimaet ble varmere da istiden tok slutt, men jakt var trolig også en årsak: Dyrene utenfor Afrika hadde aldri møtt mennesker og hadde ikke lært å frykte dem.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Når begynte antropocen?</h5>
-                <p>Stadig flere forskere mener vi lever i en ny geologisk epoke, antropocen, menneskets tidsalder. Boken spør når mennesket begynte å sette slike spor. Teller jegerne i Brunlanes med, eller var fotavtrykket deres for lett?</p>
-              </section>
-            </div>
-
-            <div class="places reveal">
-              <h4 class="label">Funnsteder i Norge</h4>
-              <ul>
-                <li><strong>Pauler gård, Brunlanes</strong> om lag 11 800 år siden</li>
-                <li><strong>Tønsnes ved Tromsø</strong> 9500 år gamle hustufter, kanskje de eldste sporene etter faste bosetninger i Norden</li>
-                <li><strong>Vistehulen ved Stavanger</strong> de eldste sporene er om lag 8000 år gamle</li>
-                <li><strong>Simavik i Troms og Sarnes ved Nordkapp</strong> boplasser fra samme periode</li>
-              </ul>
-            </div>
-
-            <div class="context reveal">
-              <div><h4>Før</h4><p>Homo sapiens har oppstått og spredt seg over hele kloden. Den kognitive revolusjonen har gitt store teknologiske og kulturelle endringer.</p></div>
-              <div><h4>Etter</h4><p>Jordbruksrevolusjonen og de første sivilisasjonene.</p></div>
-            </div>
-
-            <h4 class="label">Begreper</h4>
-            <ul class="chips" aria-label="Begreper i kapittel 3">
-              <li><a href="#begreper" data-term="Jeger og sanker">jeger og sanker</a></li>
-              <li><a href="#begreper" data-term="Nomade">nomade</a></li>
-              <li><a href="#begreper" data-term="Eldre steinalder">eldre steinalder</a></li>
-              <li><a href="#begreper" data-term="Flint">flint</a></li>
-              <li><a href="#begreper" data-term="Megafauna">megafauna</a></li>
-              <li><a href="#begreper" data-term="Antropocen">antropocen</a></li>
-            </ul>
-
-            <aside class="discuss reveal" aria-label="Drøft">
-              <p class="discuss__kicker">Drøft</p>
-              <p class="discuss__q">Var livet som jeger og sanker hardt? Sammenlign med livet som bonde i kapittel 4.</p>
-              <p class="discuss__tip">Se på kosthold, arbeid, sykdom og gruppestørrelse. Et sterkt svar ser begge sider, bruker eksempler fra boken og ender med en begrunnet konklusjon.</p>
-            </aside>
-          </div>
-        </div>
-      </article>
-
-      <!-- ===== KAPITTEL 4 ===== -->
-      <article class="chapter" id="kap4" aria-labelledby="kap4-tittel" data-label="Kapittel 4 · Jordbruksrevolusjonen">
-        <div class="wrap chapter__grid">
-          <div class="chapter__plate">
-            <p class="chapter__num" aria-hidden="true">04</p>
-            <p class="kicker">Kapittel 4 · s. 22–28</p>
-            <h3 class="chapter__title" id="kap4-tittel">Jordbruksrevolusjonen</h3>
-            <figure class="plate-figure plate-figure--emblem reveal">
-              <svg viewBox="0 0 300 360" role="img" aria-labelledby="emblem4">
-                <title id="emblem4">Tegning av tre kornaks</title>
-                <defs>
-                  <g id="plante">
-                    <path d="M150 360 C 150 280 151 200 150 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                    <ellipse cx="141" cy="112" rx="7" ry="17" transform="rotate(-24 141 112)"/>
-                    <ellipse cx="159" cy="112" rx="7" ry="17" transform="rotate(24 159 112)"/>
-                    <ellipse cx="141" cy="140" rx="7" ry="17" transform="rotate(-24 141 140)"/>
-                    <ellipse cx="159" cy="140" rx="7" ry="17" transform="rotate(24 159 140)"/>
-                    <ellipse cx="141" cy="168" rx="7" ry="17" transform="rotate(-24 141 168)"/>
-                    <ellipse cx="159" cy="168" rx="7" ry="17" transform="rotate(24 159 168)"/>
-                    <ellipse cx="150" cy="88" rx="6" ry="15"/>
-                    <path d="M150 74 L150 36 M138 98 L124 62 M162 98 L176 62" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                  </g>
-                </defs>
-                <g fill="currentColor">
-                  <use href="#plante" transform="rotate(-22 150 360) translate(0 34)" opacity="0.75"/>
-                  <use href="#plante" transform="rotate(20 150 360) translate(0 46)" opacity="0.75"/>
-                  <use href="#plante"/>
-                </g>
-              </svg>
-              <figcaption>Hvete var et vilt gress i Sørvest-Asia lenge før noen begynte å dyrke det.</figcaption>
-            </figure>
-          </div>
-
-          <div class="chapter__body">
-            <figure class="quote reveal">
-              <blockquote><p>«… matproduksjon var indirekte en forutsetning for utviklingen av våpen, pest og stål.»</p></blockquote>
-              <figcaption>Jared M. Diamond, amerikansk biolog</figcaption>
-            </figure>
-
-            <h4 class="label">Kort fortalt</h4>
-            <p class="lede reveal">For om lag 12 000 år siden begynte mennesker å dyrke planter og holde dyr. Jordbruksrevolusjonen er overgangen fra å leve av det man kunne sanke, fiske eller jakte, til å leve av mat man selv hadde dyrket, og dyr man hadde alt opp. Mange historikere mener det er den viktigste endringen i menneskenes historie.</p>
-
-            <h4 class="label">Hovedpunkter</h4>
-            <div class="points">
-              <section class="point reveal">
-                <h5>Hvor og når</h5>
-                <p>Et av de første stedene var den fruktbare halvmåne i Midtøsten. Jordbruk oppsto minst åtte steder uavhengig av hverandre, blant annet i Andesfjellene og i Kina. For om lag 5000 år siden hadde det spredt seg til de fleste områder i verden. I Norge fikk jordbruket sitt gjennombrudd på 2300-tallet f.Kr.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Domestisering</h5>
-                <p>Når mennesker tar kontroll over hvordan planter og dyr formerer seg, kalles det domestisering. Bøndene sådde kornene som ga størst avling, og slik endret hveten seg. Hunden ble det første husdyret for om lag 15 000 år siden. Deretter fulgte sau, geit, gris og ku.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Temmet hveten oss?</h5>
-                <p>Hveten måtte pløyes, lukes og vannes, og bøndene måtte spare såkorn til neste år og beskytte avlingen. Folk måtte bo fast og planlegge. Boken spør derfor om det kanskje var hveten som temmet menneskene.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Hvorfor begynte folk med jordbruk?</h5>
-                <p>Ingen vet sikkert. Boken nevner fire forklaringer: befolkningsøkning, klimaendringer, gode tider som ga overskudd til å prøve nye ideer, og fester der de med mest mat kunne knytte flere til seg. Trolig var overgangen et resultat av mange beslutninger over lang tid.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Australia: et unntak</h5>
-                <p>Aboriginene tok med seg jordbruk fra Papua Ny-Guinea, men gikk bort fra det. Klimaet i Australia er så uforutsigbart at det lønte seg bedre å kunne flytte. Det var en fornuftig tilpasning, ikke mangel på kunnskap.</p>
-              </section>
-            </div>
-
-            <div class="ledger reveal">
-              <h4 class="label">Hva fikk jordbruket å si?</h4>
-              <div class="ledger__cols">
-                <div>
-                  <h5><span class="ledger__mark" aria-hidden="true">+</span> Gevinster</h5>
-                  <ul>
-                    <li>Flere mennesker kunne leve på et mindre område.</li>
-                    <li>Overskudd av mat og større matsikkerhet de fleste år.</li>
-                    <li>Husdyr ga kjøtt, melk, skinn, gjødsel og transport.</li>
-                    <li>Overskuddet frigjorde folk til andre yrker, som handelsmann, pottemaker og prest.</li>
-                    <li>Landsbyer og senere byer kunne vokse fram.</li>
-                  </ul>
-                </div>
-                <div>
-                  <h5><span class="ledger__mark" aria-hidden="true">−</span> Kostnader</h5>
-                  <ul>
-                    <li>Mer arbeid og slitasjeskader, særlig hos kvinnene.</li>
-                    <li>Mer ensidig og næringsfattig kost, og levealderen gikk ned.</li>
-                    <li>Mer sykdom, blant annet virus fra dyr til mennesker.</li>
-                    <li>Sårbarhet når avlingen slo feil, som under hungersnøden i Irland <span class="nowrap">1845–49</span>.</li>
-                    <li>Større sosiale forskjeller, eiendomsrett og mindre likestilling mellom kjønnene.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <section class="point point--wide reveal">
-              <h5>Var det en revolusjon?</h5>
-              <p>En revolusjon er en rask og grunnleggende endring. Overgangen til jordbruk tok flere tusen år, så noen vil heller kalle den en evolusjon. Likevel var endringen så grunnleggende at byer og stater først ble mulige etterpå. Og sett mot hele menneskehetens historie er noen tusen år kanskje ikke så lenge.</p>
-            </section>
-
-            <div class="context reveal">
-              <div><h4>Før</h4><p>Menneskene har spredt seg til alle verdensdeler og levd i små grupper som jegere og sankere.</p></div>
-              <div><h4>Etter</h4><p>De første sivilisasjonene, byer og handelsruter. Mye senere: den industrielle revolusjon.</p></div>
-            </div>
-
-            <h4 class="label">Begreper</h4>
-            <ul class="chips" aria-label="Begreper i kapittel 4">
-              <li><a href="#begreper" data-term="Jordbruksrevolusjonen">jordbruksrevolusjonen</a></li>
-              <li><a href="#begreper" data-term="Domestisering">domestisering</a></li>
-              <li><a href="#begreper" data-term="Den fruktbare halvmåne">den fruktbare halvmåne</a></li>
-              <li><a href="#begreper" data-term="Overskudd">overskudd</a></li>
-              <li><a href="#begreper" data-term="Arbeidsdeling">arbeidsdeling</a></li>
-              <li><a href="#begreper" data-term="Fruktbarhetskultus">fruktbarhetskultus</a></li>
-              <li><a href="#begreper" data-term="Revolusjon">revolusjon</a></li>
-            </ul>
-
-            <aside class="discuss reveal" aria-label="Drøft">
-              <p class="discuss__kicker">Drøft</p>
-              <p class="discuss__q">Historikeren Yuval Harari har kalt jordbruksrevolusjonen en felle for menneskene. Hva kan han mene, og er du enig?</p>
-              <p class="discuss__tip">Skill mellom hva som var bra for samfunnet, og hva som var bra for den enkelte. Bruk både gevinstene og kostnadene over.</p>
-            </aside>
-          </div>
-        </div>
-      </article>
-
-      <!-- ===== KAPITTEL 5 ===== -->
-      <article class="chapter" id="kap5" aria-labelledby="kap5-tittel" data-label="Kapittel 5 · De første statene">
-        <div class="wrap chapter__grid">
-          <div class="chapter__plate">
-            <p class="chapter__num" aria-hidden="true">05</p>
-            <p class="kicker">Kapittel 5 · s. 29–33</p>
-            <h3 class="chapter__title" id="kap5-tittel">De første statene</h3>
-            <figure class="plate-figure reveal">
-              <img src="bilder/hammurapi-stele.jpg" width="567" height="730" loading="lazy" decoding="async" alt="Toppen av en mørk steinstøtte med et relieff av en stående mann foran en sittende gud.">
-              <figcaption>Toppen av steinstøtten med Hammurapis lover. Kongen står foran solguden Shamasj. Støtten er av bergarten dioritt og står i dag i Louvre i Paris.</figcaption>
-            </figure>
-          </div>
-
-          <div class="chapter__body">
-            <figure class="quote reveal">
-              <blockquote><p>«Med lov skal landet vårt byggjast og ikkje med ulov øydast»</p></blockquote>
-              <figcaption>Frostatingslova</figcaption>
-            </figure>
-
-            <h4 class="label">Kort fortalt</h4>
-            <p class="lede reveal">De første avanserte kulturene vokste fram ved store elver: Nilen, Indus, Huangelva og Changelva i Kina, og Eufrat og Tigris i Mesopotamia, «landet mellom elvene». På 5000-tallet f.Kr. fantes det flere byer i Mesopotamia, og mange av dem utviklet seg til egne stater.</p>
-
-            <h4 class="label">Hovedpunkter</h4>
-            <div class="points">
-              <section class="point reveal">
-                <h5>Hva er en stat?</h5>
-                <p>Den tyske samfunnsviteren Max Weber definerte staten som den som har «monopol på legitim bruk av makt» innenfor et territorium. Bare staten har rett til å bruke tvang mot borgerne, lage lover og utstede penger. Stater har også tydelige grenser og er anerkjent av andre stater.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Prestene i Sumer</h5>
-                <p>Jordbruket ga overskudd, og overskuddet ga oppfinnelser som hjulet, seilet, bronse, murstein og en kalender med 360 dager. Prestene visste hva gudinnen Inanna måtte få for å gi god avling. Derfor kunne de kreve inn skatt og styre handelen. Dette kalles tempelkapitalisme. Zigguratene var både templer og steder for å observere himmelen.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Spesialisering og lagdeling</h5>
-                <p>Noen ble håndverkere, andre holdt orden på statens økonomi eller fungerte som ordensmakt. Etter hvert overtok kongen og mennene hans skatteinnkrevingen, og makten ble samlet. Lugal var opprinnelig en kongetittel som ikke gikk i arv.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Fra bystat til imperium</h5>
-                <p>Bofaste og nomader kom i konflikt om de fruktbare områdene og om skatt på beitemarkene. Nomadehøvdingen Sargon grunnla byen Akkad og erobret flere sumeriske byer. Rundt 2350 f.Kr. hadde han skapt historiens første imperium, en stat som hersket over andre stater.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Hammurapis lover</h5>
-                <p>Amoritten Hammurapi styrte et enda større rike med Babylon som hovedstad. Riket hadde mange folkegrupper, språk og tradisjoner. For å holde det samlet lot han statens lover skrive ned i 282 paragrafer om blant annet eiendom, skatt, ektefellers rettigheter og straff. Kopier på leirtavler ble sendt til alle provinsene, så loven skulle gjelde likt overalt. Han gjennomførte også en myntreform.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Skriften</h5>
-                <p>Sumererne utviklet kileskrift på 3000-tallet f.Kr. De fleste leirtavlene handler om økonomi: regnskap over korn, innkrevd skatt og handelsavtaler. Skriften styrket kongemakten og ga de første utdanningene. Boken peker på at staten som fenomen kanskje oppsto i kjølvannet av skriften.</p>
-              </section>
-            </div>
-
-            <div class="places reveal">
-              <h4 class="label">Tidlige sivilisasjoner <span class="label__src">fra undervisningen</span></h4>
-              <ul>
-                <li><strong>Mellom Eufrat og Tigris</strong> om lag 5500 år siden</li>
-                <li><strong>Ved Nilen og i India</strong> om lag 5000 år siden</li>
-                <li><strong>Kina</strong> om lag 4000 år siden</li>
-                <li><strong>Mellom-Amerika og Peru</strong> om lag 3500 år siden. I motsetning til de andre var de ikke knyttet til store elver.</li>
-              </ul>
-            </div>
-
-            <div class="context reveal">
-              <div><h4>Før</h4><p>Jordbrukssamfunn har utviklet seg flere steder. Byer med lagdelte samfunn har oppstått, og handelen vokser.</p></div>
-              <div><h4>Etter</h4><p>Flere store sivilisasjoner i Midtøsten, Kina og Indusdalen. Jordbruket sprer seg til Europa, og bronse og jern tas i bruk.</p></div>
-            </div>
-
-            <h4 class="label">Begreper</h4>
-            <ul class="chips" aria-label="Begreper i kapittel 5">
-              <li><a href="#begreper" data-term="Stat">stat</a></li>
-              <li><a href="#begreper" data-term="Suverenitet">suverenitet</a></li>
-              <li><a href="#begreper" data-term="Bystat">bystat</a></li>
-              <li><a href="#begreper" data-term="Tempelkapitalisme">tempelkapitalisme</a></li>
-              <li><a href="#begreper" data-term="Ziggurat">ziggurat</a></li>
-              <li><a href="#begreper" data-term="Lugal">lugal</a></li>
-              <li><a href="#begreper" data-term="Imperium">imperium</a></li>
-              <li><a href="#begreper" data-term="Kileskrift">kileskrift</a></li>
-            </ul>
-
-            <aside class="discuss reveal" aria-label="Drøft">
-              <p class="discuss__kicker">Drøft</p>
-              <p class="discuss__q">Hvilken rolle spilte skriften for de første statene? Kunne en moderne stat fungert uten skrift?</p>
-              <p class="discuss__tip">Knytt skriften til konkrete oppgaver staten har: lover, skatt, penger og administrasjon. Bruk Hammurapi som eksempel.</p>
-            </aside>
-          </div>
-        </div>
-      </article>
-
-      <!-- ===== KAPITTEL 6 ===== -->
-      <article class="chapter" id="kap6" aria-labelledby="kap6-tittel" data-label="Kapittel 6 · Teokrati">
-        <div class="wrap chapter__grid">
-          <div class="chapter__plate">
-            <p class="chapter__num" aria-hidden="true">06</p>
-            <p class="kicker">Kapittel 6 · s. 34–37</p>
-            <h3 class="chapter__title" id="kap6-tittel">Teokrati</h3>
-            <figure class="plate-figure plate-figure--emblem reveal">
-              <svg viewBox="0 0 300 360" role="img" aria-labelledby="emblem6">
-                <title id="emblem6">Tegning av to pyramider foran en solskive</title>
-                <circle class="emblem-sun" cx="196" cy="150" r="58"/>
-                <path d="M30 280 L140 140 L140 280 Z" fill="currentColor"/>
-                <path class="emblem-shade" d="M140 140 L250 280 L140 280 Z"/>
-                <path d="M196 280 L240 226 L240 280 Z" fill="currentColor"/>
-                <path class="emblem-shade" d="M240 226 L284 280 L240 280 Z"/>
-                <path d="M10 280 L290 280" stroke="currentColor" stroke-width="2"/>
-                <path d="M30 304 C 90 296 150 312 210 302 C 240 298 262 300 286 304" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-                <path d="M60 326 C 120 318 180 332 250 322" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.35"/>
-              </svg>
-              <figcaption>Pyramidene i Giza ble bygd i det gamle riket. De er det fremste symbolet på faraos makt.</figcaption>
-            </figure>
-          </div>
-
-          <div class="chapter__body">
-            <figure class="quote reveal">
-              <blockquote><p>«Et rettferdig samfunn avhenger av sann gudsdyrkelse.»</p></blockquote>
-              <figcaption>Augustin (354–430) i boken <cite>Gudsstaten</cite></figcaption>
-            </figure>
-
-            <h4 class="label">Kort fortalt</h4>
-            <p class="lede reveal">I et teokrati er politikk og religion blandet sammen, og herskeren begrunner makten sin med gudene. Sett over hele historien er dagens sekulære demokratier unntaket. De fleste samfunn har vært monarkier der religionen ga kongen eller keiseren rett til å styre.</p>
-
-            <h4 class="label">Hovedpunkter</h4>
-            <div class="points">
-              <section class="point reveal">
-                <h5>Utvalgt av en gud</h5>
-                <p>Kong Hammurapi hevdet at han hadde fått lovene fra guden Shamasj. Han var ikke selv en gud, men hadde fått i oppdrag av en gud å innføre lovene og sørge for at de ble fulgt.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Farao var en gud</h5>
-                <p>Øvre og Nedre Egypt ble samlet rundt 3100 f.Kr. under en konge med tittelen farao. Ifølge Osiris-myten var den levende faraoen guden Horus. Når farao døde, ble han Osiris, som hersket i dødsriket. Farao eide landet og hadde i utgangspunktet all makt.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Prestene tar over</h5>
-                <p>Når farao var et barn eller ikke kunne styre, hadde prestene den reelle makten. Slikt prestestyre fantes også i sumeriske bystater som Ur og Uruk. Moderne eksempler er halvøya Athos i Hellas, der bare ortodokse munker bor, og Vatikanstaten.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Konge og kirke</h5>
-                <p>I middelalderen støttet kirken og kongene hverandre. Paven kalte Karl den store «en konge av Guds nåde». I Norge begrunnet Olav Tryggvason og Olav Haraldsson kristningen med religiøse visjoner, og det styrket også kravet deres på makt.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Iran i dag</h5>
-                <p>Etter revolusjonen i 1979 er Iran både republikk og teokrati. Folket velger president og parlament, men den øverste lederen, ayatolla Khamenei, er ikke valgt av folket og har makten over militæret, politiet og de statlige mediene. Før valget i 2004 stengte Vokterrådet om lag 2000 kandidater ute.</p>
-              </section>
-            </div>
-
-            <div class="table-wrap reveal">
-              <table class="types types--examples">
-                <caption>Fire former for teokrati</caption>
-                <thead>
-                  <tr><th scope="col">Form</th><th scope="col">Hva det betyr</th><th scope="col">Eksempler</th></tr>
-                </thead>
-                <tbody>
-                  <tr><th scope="row">Sakralt kongedømme</th><td>Herskerens makt springer ut av religionen. Herskeren kan selv regnes som guddommelig.</td><td>Farao i Egypt, Muhammed og kalifene</td></tr>
-                  <tr><th scope="row">Prestestyre (hierokrati)</th><td>Prestene har den reelle makten.</td><td>Ur og Uruk, Athos, Vatikanstaten</td></tr>
-                  <tr><th scope="row">Allianse mellom konge og kirke</th><td>Kongen og kirken styrker hverandre.</td><td>Karl den store, Olav den hellige</td></tr>
-                  <tr><th scope="row">Skriftteokrati</th><td>En hellig tekst er øverste lov.</td><td>Calvins Genève fra 1541, samfunn der sharia er øverste lov</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="context reveal">
-              <div><h4>Før</h4><p>Byer og stater har oppstått i Kina, Indusdalen og Midtøsten. Religionene blir skriftbaserte, og det skjer en overgang fra mange guder til én gud.</p></div>
-              <div><h4>Etter</h4><p>Det babylonske, det assyriske og det persiske riket kjemper om makten. Så følger antikken, Romerriket, kristendommen og islam.</p></div>
-            </div>
-
-            <h4 class="label">Begreper</h4>
-            <ul class="chips" aria-label="Begreper i kapittel 6">
-              <li><a href="#begreper" data-term="Teokrati">teokrati</a></li>
-              <li><a href="#begreper" data-term="Sakralt kongedømme">sakralt kongedømme</a></li>
-              <li><a href="#begreper" data-term="Prestestyre (hierokrati)">prestestyre</a></li>
-              <li><a href="#begreper" data-term="Skriftteokrati">skriftteokrati</a></li>
-              <li><a href="#begreper" data-term="Farao">farao</a></li>
-              <li><a href="#begreper" data-term="Sekulær">sekulær</a></li>
-            </ul>
-
-            <aside class="discuss reveal" aria-label="Drøft">
-              <p class="discuss__kicker">Drøft</p>
-              <p class="discuss__q">Hva er de viktigste forskjellene mellom teokrati og demokrati? Bruk Iran til å vise at grensen ikke alltid er skarp.</p>
-              <p class="discuss__tip">Sammenlign hvem som har makten, hvor makten kommer fra, og hvordan folket kan kontrollere den.</p>
-            </aside>
-          </div>
-        </div>
-      </article>
-
-      <!-- ===== KAPITTEL 7 ===== -->
-      <article class="chapter" id="kap7" aria-labelledby="kap7-tittel" data-label="Kapittel 7 · Demokratiet i polisene">
-        <div class="wrap chapter__grid">
-          <div class="chapter__plate">
-            <p class="chapter__num" aria-hidden="true">07</p>
-            <p class="kicker">Kapittel 7 · s. 44–49</p>
-            <h3 class="chapter__title" id="kap7-tittel">Demokratiet i polisene</h3>
-            <figure class="plate-figure plate-figure--narrow reveal">
-              <img src="bilder/ostraka.jpg" width="403" height="768" loading="lazy" decoding="async" alt="Tre brune potteskår med greske bokstaver risset inn.">
-              <figcaption>Potteskår, ostraka, med navn på politikere. Ved ostrakisme skrev borgerne navnet på den de ville vise ut av Aten. På det midterste skåret står navnet Kimon.</figcaption>
-            </figure>
-          </div>
-
-          <div class="chapter__body">
-            <figure class="quote reveal">
-              <blockquote><p>«Makt kan vokse hvis man deler på den.»</p></blockquote>
-              <figcaption>Historiker Mona Ringvej om det atenske demokratiet</figcaption>
-            </figure>
-
-            <h4 class="label">Kort fortalt</h4>
-            <p class="lede reveal">For 2500 år siden så de fleste herskere på folket som sin eiendom. I flere greske bystater, poliser, fikk borgerne i stedet stemme direkte over lover og krig. Aten fra 508 til 322 f.Kr. er det best kjente eksemplet. Men færre enn én av fem innbyggere var borgere.</p>
-
-            <h4 class="label">Hovedpunkter</h4>
-            <div class="points">
-              <section class="point reveal">
-                <h5>Polisene</h5>
-                <p>Nærmere tusen greske poliser lå rundt Middelhavet. En polis var en by med mur, omgitt av jordbruksland. Felles språk, kultur, religion og handel bandt dem sammen, men de kom ofte i konflikt om den knappe jorden.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Jern ga soldatene makt</h5>
-                <p>Fram til 700-tallet f.Kr. styrte aristokratene, de rikeste jordeierne, som betalte for hester, våpen og rustning. På 600-tallet f.Kr. ble jern bedre og billigere. Flere bønder kunne utruste seg selv som soldater og ble mindre avhengige av aristokratene. I falanksen kjempet de side om side, og lojaliteten flyttet seg til våpenbrødrene.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Solon og Kleistenes</h5>
-                <p>I 590-årene f.Kr. protesterte bondesoldatene med Solon i spissen. All gjeld ble strøket, og borgerne fikk rettigheter etter hvor mye jord de eide. I 508 f.Kr. gikk Kleistenes lenger: Han fjernet de graderte rettighetene, og alle borgere fikk delta i en folkeforsamling.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Perikles</h5>
-                <p>Den mest kjente strategen ble gjenvalgt 14 ganger. Han ga betaling for verv i rådet og juryene, så også fattige borgere hadde råd til å delta. En tale av Perikles er den eldste kjente kilden til ordet demokrati.</p>
-              </section>
-            </div>
-
-            <div class="system reveal">
-              <h4 class="label">Slik styrte borgerne Aten</h4>
-              <ol class="system__list">
-                <li><strong>Folkeforsamlingen</strong> Alle borgere kunne møte. Den samlet seg 40 ganger i året, alle kunne be om ordet, og de stemte ved å rekke opp hånden.</li>
-                <li><strong>Rådet på 500</strong> Femti borgere fra hvert av de ti områdene ble trukket ut ved loddtrekning. Rådet sto for det daglige styret og satt ett år om gangen.</li>
-                <li><strong>De ti strategene</strong> Valgt blant hærførerne. De hadde ansvar for forsvar og utenrikspolitikk og kunne gjenvelges.</li>
-                <li><strong>Domstolene</strong> En jury på minst 201 borgere avgjorde sakene med småstein i to krukker. Flertallet bestemte.</li>
-                <li><strong>Ostrakisme</strong> Hemmelig, skriftlig avstemning om å vise en borger ut av polisen.</li>
-              </ol>
-            </div>
-
-            <div class="table-wrap reveal">
-              <table class="types">
-                <caption>Var Aten et demokrati? Robert A. Dahls krav</caption>
-                <thead>
-                  <tr><th scope="col">Krav</th><th scope="col">Slik var det i Aten</th></tr>
-                </thead>
-                <tbody>
-                  <tr><th scope="row">Stemme- og ytringsfrihet for alle</th><td>Bare for voksne, frie menn med jord og røtter i polisen. Kvinner, slaver, innflyttere og unge var utestengt.</td></tr>
-                  <tr><th scope="row">Mangfold av informasjonskilder</th><td>Alle borgere kunne ta ordet, men de med utdanning, status og trening i talekunst påvirket trolig mer enn andre.</td></tr>
-                  <tr><th scope="row">Fri konkurranse om stemmene</th><td>Ingen partier, bare små grupper som byboere og landboere. Hver sak var i praksis en folkeavstemning.</td></tr>
-                  <tr><th scope="row">Frie og rettferdige valg</th><td>Avstemning ved håndsopprekning, så alle så hva du stemte. Bare ved ostrakisme var avstemningen hemmelig.</td></tr>
-                  <tr><th scope="row">Folkevalgt innflytelse</th><td>Svært stor: Borgerne bestemte direkte. Vervene varte som regel bare ett år.</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <section class="point point--wide reveal">
-              <h5>Sammenlign med Norge</h5>
-              <p>Grunnloven fra 1814 ga heller ikke stemmerett til menn uten eiendom. Allmenn stemmerett for menn kom i 1898, og kvinner fikk stemmerett på lik linje med menn i 1913. Hvis Aten ikke var et demokrati, hva var da Norge før 1913?</p>
-            </section>
-
-            <aside class="contrast reveal" aria-labelledby="sparta-tittel">
-              <h4 id="sparta-tittel">Motbildet: Sparta <span class="label__src">fra undervisningen</span></h4>
-              <p>Sparta var en sterkt militarisert bystat. Gutter levde i kaserner fra de var 7 til 30 år. Borgerne kalte seg «de like», mens helotene, en undertrykt folkegruppe, måtte arbeide for dem. Sparta hadde to konger som først og fremst var hærførere, og en folkeforsamling med lite makt. Derfor regnes Sparta som et oligarki.</p>
-            </aside>
-
-            <div class="context reveal">
-              <div><h4>Før</h4><p>Jordbruksrevolusjon og de første sivilisasjonene. Stater ledet av prester og konger.</p></div>
-              <div><h4>Etter</h4><p>Føydalisme, Magna Charta, eneveldet, politiske revolusjoner, allmenn stemmerett og menneskerettigheter.</p></div>
-            </div>
-
-            <h4 class="label">Begreper</h4>
-            <ul class="chips" aria-label="Begreper i kapittel 7">
-              <li><a href="#begreper" data-term="Polis">polis</a></li>
-              <li><a href="#begreper" data-term="Aristokrati">aristokrati</a></li>
-              <li><a href="#begreper" data-term="Tyrann">tyrann</a></li>
-              <li><a href="#begreper" data-term="Falanks">falanks</a></li>
-              <li><a href="#begreper" data-term="Demos">demos</a></li>
-              <li><a href="#begreper" data-term="Direkte demokrati">direkte demokrati</a></li>
-              <li><a href="#begreper" data-term="Representativt demokrati">representativt demokrati</a></li>
-              <li><a href="#begreper" data-term="Strateg">strateg</a></li>
-              <li><a href="#begreper" data-term="Ostrakisme">ostrakisme</a></li>
-            </ul>
-
-            <aside class="discuss reveal" aria-label="Drøft">
-              <p class="discuss__kicker">Drøft</p>
-              <p class="discuss__q">Skal vi beundre eller fordømme det atenske demokratiet?</p>
-              <p class="discuss__tip">Vurder Aten både ut fra sin egen tid og ut fra Dahls krav. Pass på at du ikke bare dømmer fortiden med dagens briller.</p>
-            </aside>
-          </div>
-        </div>
-      </article>
-
-      <!-- ===== KAPITTEL 8 ===== -->
-      <article class="chapter" id="kap8" aria-labelledby="kap8-tittel" data-label="Kapittel 8 · Fra myter til fornuft">
-        <div class="wrap chapter__grid">
-          <div class="chapter__plate">
-            <p class="chapter__num" aria-hidden="true">08</p>
-            <p class="kicker">Kapittel 8 · s. 50–55</p>
-            <h3 class="chapter__title" id="kap8-tittel">Fra mytologiske til rasjonelle forklaringer</h3>
-            <figure class="plate-figure reveal">
-              <img src="bilder/platon-aristoteles.jpg" width="804" height="1052" loading="lazy" decoding="async" alt="Utsnitt av et maleri: to skjeggete menn i lange kapper går side om side. Den ene peker opp, den andre holder hånden ut foran seg.">
-              <figcaption>Platon (til venstre) og Aristoteles. Utsnitt av freskoen «Skolen i Aten» av Rafael.</figcaption>
-            </figure>
-          </div>
-
-          <div class="chapter__body">
-            <figure class="quote reveal">
-              <blockquote><p>«Kunnskap er mat for sjelen.»</p></blockquote>
-              <figcaption>Platon i <cite>Georgias</cite></figcaption>
-            </figure>
-
-            <h4 class="label">Kort fortalt</h4>
-            <p class="lede reveal">«Hvis jeg har sett lenger enn andre, er det fordi jeg har stått på skuldrene til kjemper», skrev Isaac Newton i 1676. Noen av kjempene levde 2000 år før ham, i den greske antikken. Der begynte enkelte å lete etter forklaringer i naturen selv i stedet for hos gudene.</p>
-
-            <h4 class="label">Hovedpunkter</h4>
-            <div class="points">
-              <section class="point reveal">
-                <h5>Fra mythos til logos</h5>
-                <p>Grekerne forklarte verden med guder og skjebne, og de ofret for å få gudene på sin side. Noen begynte likevel å studere naturen og lete etter logiske årsaker, og de diskuterte forklaringene med andre. Denne overgangen kalles mythos–logos-overgangen. Måten å tenke på kalles filosofi, «kjærlighet til visdom».</p>
-              </section>
-              <section class="point reveal">
-                <h5>Skriftens rolle</h5>
-                <p>Rundt 800 f.Kr. fikk grekerne et forenklet alfabet med 20 tegn. Flere lærte å skrive, og tekster kunne lagres og leses av mange. En teori er at dette ga tankene friere tøyler.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Naturfilosofene</h5>
-                <p>Tales fra Milet (625–545 f.Kr.) mente at alt var laget av vann. Han tok feil, men han lette etter et prinsipp i naturen og ikke etter en gud. Demokrit (460–370 f.Kr.) mente alt besto av små, udelelige atomer. Pytagoras (ca. 570–500 f.Kr.) brukte tall: Summen av vinklene i en trekant er alltid 180 grader.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Lege og historiker</h5>
-                <p>Hippokrates og andre leger beskrev sykdom ut fra observasjoner, ikke som noe gudene bestemte. Herodot regnes som historiefagets far. Det greske ordet <i lang="grc-Latn">historia</i> betyr undersøkelse.</p>
-              </section>
-            </div>
-
-            <figure class="wide-figure reveal">
-              <img src="bilder/sokrates-dod.jpg" width="1400" height="531" loading="lazy" decoding="async" alt="Maleri av en eldre mann i hvitt som sitter på en seng og strekker hånden mot et beger, omgitt av sørgende menn.">
-              <figcaption>«Sokrates’ død», malt av Jacques-Louis David i 1787.</figcaption>
-            </figure>
-
-            <div class="points">
-              <section class="point reveal">
-                <h5>Sokrates</h5>
-                <p>Sokrates (ca. 470–399 f.Kr.) stilte spørsmål til folk i Atens gater: «Hvordan vet du at det du sier, er riktig?» Han mente de uvitende er farlige, og at den som tenker seg fram til hva som er rett, også gjør det rette. I 399 f.Kr. ble han dømt til døden for å forderve ungdommen og fornærme gudene.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Platon og Aristoteles</h5>
-                <p>Platon (427–347 f.Kr.) skrev ned dialogene til Sokrates. Han mente det vi sanser, bare er skygger av en evig, ideell verden, og at filosofene burde styre staten i stedet for folket. Eleven hans Aristoteles var opptatt av både likheter og forskjeller, og han begynte å ordne dyr og planter etter slektskap. Han mente også at mannen sto øverst.</p>
-              </section>
-              <section class="point reveal">
-                <h5>Hellenismen</h5>
-                <p>Aristoteles var lærer for Aleksander den store. Da Aleksander døde i 323 f.Kr., hadde han erobret et rike fra Indus til Middelhavet. Gresk kultur blandet seg med kunnskap fra øst, og blandingskulturen kalles hellenismen. Rundt 100 f.Kr. hadde biblioteket i Alexandria hundretusenvis av manuskripter.</p>
-              </section>
-            </div>
-
-            <div class="context reveal">
-              <div><h4>Før</h4><p>Jordbruksrevolusjonen. Greske poliser med demokratiske innslag.</p></div>
-              <div><h4>Etter</h4><p>Tre verdensreligioner. Renessansen, opplysningstiden, sekularisering og kunnskapssamfunnet.</p></div>
-            </div>
-
-            <h4 class="label">Begreper</h4>
-            <ul class="chips" aria-label="Begreper i kapittel 8">
-              <li><a href="#begreper" data-term="Mythos–logos-overgangen">mythos–logos-overgangen</a></li>
-              <li><a href="#begreper" data-term="Filosofi">filosofi</a></li>
-              <li><a href="#begreper" data-term="Naturfilosof">naturfilosof</a></li>
-              <li><a href="#begreper" data-term="Atom">atom</a></li>
-              <li><a href="#begreper" data-term="Sokratisk metode">sokratisk metode</a></li>
-              <li><a href="#begreper" data-term="Idélæren">idélæren</a></li>
-              <li><a href="#begreper" data-term="Hellenisme">hellenisme</a></li>
-            </ul>
-
-            <aside class="discuss reveal" aria-label="Drøft">
-              <p class="discuss__kicker">Drøft</p>
-              <p class="discuss__q">Hvorfor finnes det trolig en sammenheng mellom utviklingen av demokrati og utviklingen av filosofi?</p>
-              <p class="discuss__tip">Tenk på hva begge krever: åpen debatt, at mange kan delta, og at argumenter teller mer enn rang. Ta med at Sokrates likevel ble dømt til døden av sine medborgere.</p>
-            </aside>
-          </div>
-        </div>
-      </article>
     </section>
 
+    <!-- ===== KAPITTEL 3 ===== -->
+    <article class="view chapter" id="kap3" data-view data-title="Kapittel 3 · Jegere og sankere" aria-labelledby="kap3-tittel">
+      <div class="wrap chapter__grid">
+        <div class="chapter__plate">
+          <p class="chapter__num" aria-hidden="true">03</p>
+          <p class="kicker">Kapittel 3 · s. 18–21</p>
+          <h2 class="chapter__title" id="kap3-tittel">Livet som jegere og sankere</h2>
+          <figure class="plate-figure reveal">
+            <img src="bilder/altamira-bison.jpg" width="1024" height="810" loading="lazy" decoding="async" alt="Hulemaleri av en bison i rødbrune og svarte farger på en ujevn steinvegg.">
+            <figcaption>Hulemaleri fra Altamira i Nord-Spania, om lag 15 000 år gammelt.</figcaption>
+          </figure>
+        </div>
+
+        <div class="chapter__body">
+          <figure class="quote reveal">
+            <blockquote><p>«… i mesteparten av menneskets historie har folk levd av å jakte og sanke ville dyr og planter.»</p></blockquote>
+            <figcaption>Carol R. Ember, amerikansk antropolog</figcaption>
+          </figure>
+
+          <h3 class="label">Kort fortalt</h3>
+          <p class="lede reveal">For om lag 11 800 år siden slo en liten gruppe mennesker seg ned ved Pauler gård i Brunlanes, nær dagens Larvik. Boplassen er en av de eldste som er funnet i Norge, og arkeologene har funnet rundt 20 000 gjenstander der. Gruppen levde slik mennesker har levd i nesten hele sin historie: som jegere og sankere.</p>
+
+          <h3 class="label">Hovedpunkter</h3>
+          <div class="points">
+            <section class="point reveal">
+              <h4>Livet ved kysten</h4>
+              <p>Alle boplassene fra eldre steinalder i Norge ligger ved kysten, fordi de er fra slutten av istiden. Først for om lag 9000 år siden smeltet isen for alvor, og folk tok seg inn i landet. Pionerene i Brunlanes etterlot seg flint, som ikke finnes naturlig i Norge. Derfor kom de trolig fra Sør-Skandinavia eller kontinentet.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Små grupper på vandring</h4>
+              <p>Jegere må følge dyrene, og da er det upraktisk å være mange. Gruppene fikk trolig få barn, fordi det er vanskelig å bære mange små barn over lange strekninger. De eide bare det de trengte.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Alle kunne mye om alt</h4>
+              <p>De fleste voksne kjente til mellom 200 og 300 nyttevekster. Kunnskapen var jevnt fordelt, og spesialiseringen var lav. Gruppen kunne ikke være avhengig av én person: Hva om den eneste som kunne lage pilspisser, døde under jakten?</p>
+            </section>
+            <section class="point reveal">
+              <h4>Kjønnsroller</h4>
+              <p>Arkeologen Ingrid Fuglestvedt mener kunnskapen var ganske likt fordelt mellom kvinner og menn. Menn jaktet trolig mest storvilt, men en kvinnegrav i Skåne fra 7000-tallet f.Kr. tyder på at kvinnen var storviltjeger. Rollene var mindre skarpe enn i de senere jordbrukssamfunnene.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Megafaunaen forsvant</h4>
+              <p>Da mennesket kom til Europa og Asia, levde det mammut, kjempehjort, hulebjørn og mange andre store dyr der. Nesten alle døde ut. Klimaet ble varmere da istiden tok slutt, men jakt var trolig også en årsak: Dyrene utenfor Afrika hadde aldri møtt mennesker og hadde ikke lært å frykte dem.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Når begynte antropocen?</h4>
+              <p>Stadig flere forskere mener vi lever i en ny geologisk epoke, antropocen, menneskets tidsalder. Boken spør når mennesket begynte å sette slike spor. Teller jegerne i Brunlanes med, eller var fotavtrykket deres for lett?</p>
+            </section>
+          </div>
+
+          <div class="places reveal">
+            <h3 class="label">Funnsteder i Norge</h3>
+            <ul>
+              <li><strong>Pauler gård, Brunlanes</strong> om lag 11 800 år siden</li>
+              <li><strong>Tønsnes ved Tromsø</strong> 9500 år gamle hustufter, kanskje de eldste sporene etter faste bosetninger i Norden</li>
+              <li><strong>Vistehulen ved Stavanger</strong> de eldste sporene er om lag 8000 år gamle</li>
+              <li><strong>Simavik i Troms og Sarnes ved Nordkapp</strong> boplasser fra samme periode</li>
+            </ul>
+          </div>
+
+          <div class="context reveal">
+            <div><h3>Før</h3><p>Homo sapiens har oppstått og spredt seg over hele kloden. Den kognitive revolusjonen har gitt store teknologiske og kulturelle endringer.</p></div>
+            <div><h3>Etter</h3><p>Jordbruksrevolusjonen og de første sivilisasjonene.</p></div>
+          </div>
+
+          <h3 class="label">Begreper</h3>
+          <ul class="chips" aria-label="Begreper i kapittel 3">
+            <li><a href="#begreper" data-term="Jeger og sanker">jeger og sanker</a></li>
+            <li><a href="#begreper" data-term="Nomade">nomade</a></li>
+            <li><a href="#begreper" data-term="Eldre steinalder">eldre steinalder</a></li>
+            <li><a href="#begreper" data-term="Flint">flint</a></li>
+            <li><a href="#begreper" data-term="Megafauna">megafauna</a></li>
+            <li><a href="#begreper" data-term="Antropocen">antropocen</a></li>
+          </ul>
+
+          <aside class="discuss reveal" aria-label="Drøft">
+            <p class="discuss__kicker">Drøft</p>
+            <p class="discuss__q">Var livet som jeger og sanker hardt? Sammenlign med livet som bonde i kapittel 4.</p>
+            <p class="discuss__tip">Se på kosthold, arbeid, sykdom og gruppestørrelse. Et sterkt svar ser begge sider, bruker eksempler fra boken og ender med en begrunnet konklusjon.</p>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== KAPITTEL 4 ===== -->
+    <article class="view chapter" id="kap4" data-view data-title="Kapittel 4 · Jordbruksrevolusjonen" aria-labelledby="kap4-tittel">
+      <div class="wrap chapter__grid">
+        <div class="chapter__plate">
+          <p class="chapter__num" aria-hidden="true">04</p>
+          <p class="kicker">Kapittel 4 · s. 22–28</p>
+          <h2 class="chapter__title" id="kap4-tittel">Jordbruksrevolusjonen</h2>
+          <figure class="plate-figure plate-figure--emblem reveal">
+            <svg viewBox="0 0 300 360" role="img" aria-labelledby="emblem4">
+              <title id="emblem4">Tegning av tre kornaks</title>
+              <defs>
+                <g id="plante">
+                  <path d="M150 360 C 150 280 151 200 150 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                  <ellipse cx="141" cy="112" rx="7" ry="17" transform="rotate(-24 141 112)"/>
+                  <ellipse cx="159" cy="112" rx="7" ry="17" transform="rotate(24 159 112)"/>
+                  <ellipse cx="141" cy="140" rx="7" ry="17" transform="rotate(-24 141 140)"/>
+                  <ellipse cx="159" cy="140" rx="7" ry="17" transform="rotate(24 159 140)"/>
+                  <ellipse cx="141" cy="168" rx="7" ry="17" transform="rotate(-24 141 168)"/>
+                  <ellipse cx="159" cy="168" rx="7" ry="17" transform="rotate(24 159 168)"/>
+                  <ellipse cx="150" cy="88" rx="6" ry="15"/>
+                  <path d="M150 74 L150 36 M138 98 L124 62 M162 98 L176 62" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </g>
+              </defs>
+              <g fill="currentColor">
+                <use href="#plante" transform="rotate(-22 150 360) translate(0 34)" opacity="0.75"/>
+                <use href="#plante" transform="rotate(20 150 360) translate(0 46)" opacity="0.75"/>
+                <use href="#plante"/>
+              </g>
+            </svg>
+            <figcaption>Hvete var et vilt gress i Sørvest-Asia lenge før noen begynte å dyrke det.</figcaption>
+          </figure>
+        </div>
+
+        <div class="chapter__body">
+          <figure class="quote reveal">
+            <blockquote><p>«… matproduksjon var indirekte en forutsetning for utviklingen av våpen, pest og stål.»</p></blockquote>
+            <figcaption>Jared M. Diamond, amerikansk biolog</figcaption>
+          </figure>
+
+          <h3 class="label">Kort fortalt</h3>
+          <p class="lede reveal">For om lag 12 000 år siden begynte mennesker å dyrke planter og holde dyr. Jordbruksrevolusjonen er overgangen fra å leve av det man kunne sanke, fiske eller jakte, til å leve av mat man selv hadde dyrket, og dyr man hadde alt opp. Mange historikere mener det er den viktigste endringen i menneskenes historie.</p>
+
+          <h3 class="label">Hovedpunkter</h3>
+          <div class="points">
+            <section class="point reveal">
+              <h4>Hvor og når</h4>
+              <p>Et av de første stedene var den fruktbare halvmåne i Midtøsten. Jordbruk oppsto minst åtte steder uavhengig av hverandre, blant annet i Andesfjellene og i Kina. For om lag 5000 år siden hadde det spredt seg til de fleste områder i verden. I Norge fikk jordbruket sitt gjennombrudd på 2300-tallet f.Kr.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Domestisering</h4>
+              <p>Når mennesker tar kontroll over hvordan planter og dyr formerer seg, kalles det domestisering. Bøndene sådde kornene som ga størst avling, og slik endret hveten seg. Hunden ble det første husdyret for om lag 15 000 år siden. Deretter fulgte sau, geit, gris og ku.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Temmet hveten oss?</h4>
+              <p>Hveten måtte pløyes, lukes og vannes, og bøndene måtte spare såkorn til neste år og beskytte avlingen. Folk måtte bo fast og planlegge. Boken spør derfor om det kanskje var hveten som temmet menneskene.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Hvorfor begynte folk med jordbruk?</h4>
+              <p>Ingen vet sikkert. Boken nevner fire forklaringer: befolkningsøkning, klimaendringer, gode tider som ga overskudd til å prøve nye ideer, og fester der de med mest mat kunne knytte flere til seg. Trolig var overgangen et resultat av mange beslutninger over lang tid.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Australia: et unntak</h4>
+              <p>Aboriginene tok med seg jordbruk fra Papua Ny-Guinea, men gikk bort fra det. Klimaet i Australia er så uforutsigbart at det lønte seg bedre å kunne flytte. Det var en fornuftig tilpasning, ikke mangel på kunnskap.</p>
+            </section>
+          </div>
+
+          <div class="ledger reveal">
+            <h3 class="label">Hva fikk jordbruket å si?</h3>
+            <div class="ledger__cols">
+              <div>
+                <h4><span class="ledger__mark" aria-hidden="true">+</span> Gevinster</h4>
+                <ul>
+                  <li>Flere mennesker kunne leve på et mindre område.</li>
+                  <li>Overskudd av mat og større matsikkerhet de fleste år.</li>
+                  <li>Husdyr ga kjøtt, melk, skinn, gjødsel og transport.</li>
+                  <li>Overskuddet frigjorde folk til andre yrker, som handelsmann, pottemaker og prest.</li>
+                  <li>Landsbyer og senere byer kunne vokse fram.</li>
+                </ul>
+              </div>
+              <div>
+                <h4><span class="ledger__mark" aria-hidden="true">−</span> Kostnader</h4>
+                <ul>
+                  <li>Mer arbeid og slitasjeskader, særlig hos kvinnene.</li>
+                  <li>Mer ensidig og næringsfattig kost, og levealderen gikk ned.</li>
+                  <li>Mer sykdom, blant annet virus fra dyr til mennesker.</li>
+                  <li>Sårbarhet når avlingen slo feil, som under hungersnøden i Irland <span class="nowrap">1845–49</span>.</li>
+                  <li>Større sosiale forskjeller, eiendomsrett og mindre likestilling mellom kjønnene.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <section class="point point--wide reveal">
+            <h4>Var det en revolusjon?</h4>
+            <p>En revolusjon er en rask og grunnleggende endring. Overgangen til jordbruk tok flere tusen år, så noen vil heller kalle den en evolusjon. Likevel var endringen så grunnleggende at byer og stater først ble mulige etterpå. Og sett mot hele menneskehetens historie er noen tusen år kanskje ikke så lenge.</p>
+          </section>
+
+          <div class="context reveal">
+            <div><h3>Før</h3><p>Menneskene har spredt seg til alle verdensdeler og levd i små grupper som jegere og sankere.</p></div>
+            <div><h3>Etter</h3><p>De første sivilisasjonene, byer og handelsruter. Mye senere: den industrielle revolusjon.</p></div>
+          </div>
+
+          <h3 class="label">Begreper</h3>
+          <ul class="chips" aria-label="Begreper i kapittel 4">
+            <li><a href="#begreper" data-term="Jordbruksrevolusjonen">jordbruksrevolusjonen</a></li>
+            <li><a href="#begreper" data-term="Domestisering">domestisering</a></li>
+            <li><a href="#begreper" data-term="Den fruktbare halvmåne">den fruktbare halvmåne</a></li>
+            <li><a href="#begreper" data-term="Overskudd">overskudd</a></li>
+            <li><a href="#begreper" data-term="Arbeidsdeling">arbeidsdeling</a></li>
+            <li><a href="#begreper" data-term="Fruktbarhetskultus">fruktbarhetskultus</a></li>
+            <li><a href="#begreper" data-term="Revolusjon">revolusjon</a></li>
+          </ul>
+
+          <aside class="discuss reveal" aria-label="Drøft">
+            <p class="discuss__kicker">Drøft</p>
+            <p class="discuss__q">Historikeren Yuval Harari har kalt jordbruksrevolusjonen en felle for menneskene. Hva kan han mene, og er du enig?</p>
+            <p class="discuss__tip">Skill mellom hva som var bra for samfunnet, og hva som var bra for den enkelte. Bruk både gevinstene og kostnadene over.</p>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== KAPITTEL 5 ===== -->
+    <article class="view chapter" id="kap5" data-view data-title="Kapittel 5 · De første statene" aria-labelledby="kap5-tittel">
+      <div class="wrap chapter__grid">
+        <div class="chapter__plate">
+          <p class="chapter__num" aria-hidden="true">05</p>
+          <p class="kicker">Kapittel 5 · s. 29–33</p>
+          <h2 class="chapter__title" id="kap5-tittel">De første statene</h2>
+          <figure class="plate-figure reveal">
+            <img src="bilder/hammurapi-stele.jpg" width="567" height="730" loading="lazy" decoding="async" alt="Toppen av en mørk steinstøtte med et relieff av en stående mann foran en sittende gud.">
+            <figcaption>Toppen av steinstøtten med Hammurapis lover. Kongen står foran solguden Shamasj. Støtten er av bergarten dioritt og står i dag i Louvre i Paris.</figcaption>
+          </figure>
+        </div>
+
+        <div class="chapter__body">
+          <figure class="quote reveal">
+            <blockquote><p>«Med lov skal landet vårt byggjast og ikkje med ulov øydast»</p></blockquote>
+            <figcaption>Frostatingslova</figcaption>
+          </figure>
+
+          <h3 class="label">Kort fortalt</h3>
+          <p class="lede reveal">De første avanserte kulturene vokste fram ved store elver: Nilen, Indus, Huangelva og Changelva i Kina, og Eufrat og Tigris i Mesopotamia, «landet mellom elvene». På 5000-tallet f.Kr. fantes det flere byer i Mesopotamia, og mange av dem utviklet seg til egne stater.</p>
+
+          <h3 class="label">Hovedpunkter</h3>
+          <div class="points">
+            <section class="point reveal">
+              <h4>Hva er en stat?</h4>
+              <p>Den tyske samfunnsviteren Max Weber definerte staten som den som har «monopol på legitim bruk av makt» innenfor et territorium. Bare staten har rett til å bruke tvang mot borgerne, lage lover og utstede penger. Stater har også tydelige grenser og er anerkjent av andre stater.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Prestene i Sumer</h4>
+              <p>Jordbruket ga overskudd, og overskuddet ga oppfinnelser som hjulet, seilet, bronse, murstein og en kalender med 360 dager. Prestene visste hva gudinnen Inanna måtte få for å gi god avling. Derfor kunne de kreve inn skatt og styre handelen. Dette kalles tempelkapitalisme. Zigguratene var både templer og steder for å observere himmelen.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Spesialisering og lagdeling</h4>
+              <p>Noen ble håndverkere, andre holdt orden på statens økonomi eller fungerte som ordensmakt. Etter hvert overtok kongen og mennene hans skatteinnkrevingen, og makten ble samlet. Lugal var opprinnelig en kongetittel som ikke gikk i arv.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Fra bystat til imperium</h4>
+              <p>Bofaste og nomader kom i konflikt om de fruktbare områdene og om skatt på beitemarkene. Nomadehøvdingen Sargon grunnla byen Akkad og erobret flere sumeriske byer. Rundt 2350 f.Kr. hadde han skapt historiens første imperium, en stat som hersket over andre stater.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Hammurapis lover</h4>
+              <p>Amoritten Hammurapi styrte et enda større rike med Babylon som hovedstad. Riket hadde mange folkegrupper, språk og tradisjoner. For å holde det samlet lot han statens lover skrive ned i 282 paragrafer om blant annet eiendom, skatt, ektefellers rettigheter og straff. Kopier på leirtavler ble sendt til alle provinsene, så loven skulle gjelde likt overalt. Han gjennomførte også en myntreform.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Skriften</h4>
+              <p>Sumererne utviklet kileskrift på 3000-tallet f.Kr. De fleste leirtavlene handler om økonomi: regnskap over korn, innkrevd skatt og handelsavtaler. Skriften styrket kongemakten og ga de første utdanningene. Boken peker på at staten som fenomen kanskje oppsto i kjølvannet av skriften.</p>
+            </section>
+          </div>
+
+          <div class="places reveal">
+            <h3 class="label">Tidlige sivilisasjoner <span class="label__src">fra undervisningen</span></h3>
+            <ul>
+              <li><strong>Mellom Eufrat og Tigris</strong> om lag 5500 år siden</li>
+              <li><strong>Ved Nilen og i India</strong> om lag 5000 år siden</li>
+              <li><strong>Kina</strong> om lag 4000 år siden</li>
+              <li><strong>Mellom-Amerika og Peru</strong> om lag 3500 år siden. I motsetning til de andre var de ikke knyttet til store elver.</li>
+            </ul>
+          </div>
+
+          <div class="context reveal">
+            <div><h3>Før</h3><p>Jordbrukssamfunn har utviklet seg flere steder. Byer med lagdelte samfunn har oppstått, og handelen vokser.</p></div>
+            <div><h3>Etter</h3><p>Flere store sivilisasjoner i Midtøsten, Kina og Indusdalen. Jordbruket sprer seg til Europa, og bronse og jern tas i bruk.</p></div>
+          </div>
+
+          <h3 class="label">Begreper</h3>
+          <ul class="chips" aria-label="Begreper i kapittel 5">
+            <li><a href="#begreper" data-term="Stat">stat</a></li>
+            <li><a href="#begreper" data-term="Suverenitet">suverenitet</a></li>
+            <li><a href="#begreper" data-term="Bystat">bystat</a></li>
+            <li><a href="#begreper" data-term="Tempelkapitalisme">tempelkapitalisme</a></li>
+            <li><a href="#begreper" data-term="Ziggurat">ziggurat</a></li>
+            <li><a href="#begreper" data-term="Lugal">lugal</a></li>
+            <li><a href="#begreper" data-term="Imperium">imperium</a></li>
+            <li><a href="#begreper" data-term="Kileskrift">kileskrift</a></li>
+          </ul>
+
+          <aside class="discuss reveal" aria-label="Drøft">
+            <p class="discuss__kicker">Drøft</p>
+            <p class="discuss__q">Hvilken rolle spilte skriften for de første statene? Kunne en moderne stat fungert uten skrift?</p>
+            <p class="discuss__tip">Knytt skriften til konkrete oppgaver staten har: lover, skatt, penger og administrasjon. Bruk Hammurapi som eksempel.</p>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== KAPITTEL 6 ===== -->
+    <article class="view chapter" id="kap6" data-view data-title="Kapittel 6 · Teokrati" aria-labelledby="kap6-tittel">
+      <div class="wrap chapter__grid">
+        <div class="chapter__plate">
+          <p class="chapter__num" aria-hidden="true">06</p>
+          <p class="kicker">Kapittel 6 · s. 34–37</p>
+          <h2 class="chapter__title" id="kap6-tittel">Teokrati</h2>
+          <figure class="plate-figure plate-figure--emblem reveal">
+            <svg viewBox="0 0 300 360" role="img" aria-labelledby="emblem6">
+              <title id="emblem6">Tegning av to pyramider foran en solskive</title>
+              <circle class="emblem-sun" cx="196" cy="150" r="58"/>
+              <path d="M30 280 L140 140 L140 280 Z" fill="currentColor"/>
+              <path class="emblem-shade" d="M140 140 L250 280 L140 280 Z"/>
+              <path d="M196 280 L240 226 L240 280 Z" fill="currentColor"/>
+              <path class="emblem-shade" d="M240 226 L284 280 L240 280 Z"/>
+              <path d="M10 280 L290 280" stroke="currentColor" stroke-width="2"/>
+              <path d="M30 304 C 90 296 150 312 210 302 C 240 298 262 300 286 304" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+              <path d="M60 326 C 120 318 180 332 250 322" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.35"/>
+            </svg>
+            <figcaption>Pyramidene i Giza ble bygd i det gamle riket. De er det fremste symbolet på faraos makt.</figcaption>
+          </figure>
+        </div>
+
+        <div class="chapter__body">
+          <figure class="quote reveal">
+            <blockquote><p>«Et rettferdig samfunn avhenger av sann gudsdyrkelse.»</p></blockquote>
+            <figcaption>Augustin (354–430) i boken <cite>Gudsstaten</cite></figcaption>
+          </figure>
+
+          <h3 class="label">Kort fortalt</h3>
+          <p class="lede reveal">I et teokrati er politikk og religion blandet sammen, og herskeren begrunner makten sin med gudene. Sett over hele historien er dagens sekulære demokratier unntaket. De fleste samfunn har vært monarkier der religionen ga kongen eller keiseren rett til å styre.</p>
+
+          <h3 class="label">Hovedpunkter</h3>
+          <div class="points">
+            <section class="point reveal">
+              <h4>Utvalgt av en gud</h4>
+              <p>Kong Hammurapi hevdet at han hadde fått lovene fra guden Shamasj. Han var ikke selv en gud, men hadde fått i oppdrag av en gud å innføre lovene og sørge for at de ble fulgt.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Farao var en gud</h4>
+              <p>Øvre og Nedre Egypt ble samlet rundt 3100 f.Kr. under en konge med tittelen farao. Ifølge Osiris-myten var den levende faraoen guden Horus. Når farao døde, ble han Osiris, som hersket i dødsriket. Farao eide landet og hadde i utgangspunktet all makt.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Prestene tar over</h4>
+              <p>Når farao var et barn eller ikke kunne styre, hadde prestene den reelle makten. Slikt prestestyre fantes også i sumeriske bystater som Ur og Uruk. Moderne eksempler er halvøya Athos i Hellas, der bare ortodokse munker bor, og Vatikanstaten.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Konge og kirke</h4>
+              <p>I middelalderen støttet kirken og kongene hverandre. Paven kalte Karl den store «en konge av Guds nåde». I Norge begrunnet Olav Tryggvason og Olav Haraldsson kristningen med religiøse visjoner, og det styrket også kravet deres på makt.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Iran i dag</h4>
+              <p>Etter revolusjonen i 1979 er Iran både republikk og teokrati. Folket velger president og parlament, men den øverste lederen, ayatolla Khamenei, er ikke valgt av folket og har makten over militæret, politiet og de statlige mediene. Før valget i 2004 stengte Vokterrådet om lag 2000 kandidater ute.</p>
+            </section>
+          </div>
+
+          <div class="table-wrap reveal">
+            <table class="types types--examples">
+              <caption>Fire former for teokrati</caption>
+              <thead>
+                <tr><th scope="col">Form</th><th scope="col">Hva det betyr</th><th scope="col">Eksempler</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Sakralt kongedømme</th><td>Herskerens makt springer ut av religionen. Herskeren kan selv regnes som guddommelig.</td><td>Farao i Egypt, Muhammed og kalifene</td></tr>
+                <tr><th scope="row">Prestestyre (hierokrati)</th><td>Prestene har den reelle makten.</td><td>Ur og Uruk, Athos, Vatikanstaten</td></tr>
+                <tr><th scope="row">Allianse mellom konge og kirke</th><td>Kongen og kirken styrker hverandre.</td><td>Karl den store, Olav den hellige</td></tr>
+                <tr><th scope="row">Skriftteokrati</th><td>En hellig tekst er øverste lov.</td><td>Calvins Genève fra 1541, samfunn der sharia er øverste lov</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="context reveal">
+            <div><h3>Før</h3><p>Byer og stater har oppstått i Kina, Indusdalen og Midtøsten. Religionene blir skriftbaserte, og det skjer en overgang fra mange guder til én gud.</p></div>
+            <div><h3>Etter</h3><p>Det babylonske, det assyriske og det persiske riket kjemper om makten. Så følger antikken, Romerriket, kristendommen og islam.</p></div>
+          </div>
+
+          <h3 class="label">Begreper</h3>
+          <ul class="chips" aria-label="Begreper i kapittel 6">
+            <li><a href="#begreper" data-term="Teokrati">teokrati</a></li>
+            <li><a href="#begreper" data-term="Sakralt kongedømme">sakralt kongedømme</a></li>
+            <li><a href="#begreper" data-term="Prestestyre (hierokrati)">prestestyre</a></li>
+            <li><a href="#begreper" data-term="Skriftteokrati">skriftteokrati</a></li>
+            <li><a href="#begreper" data-term="Farao">farao</a></li>
+            <li><a href="#begreper" data-term="Sekulær">sekulær</a></li>
+          </ul>
+
+          <aside class="discuss reveal" aria-label="Drøft">
+            <p class="discuss__kicker">Drøft</p>
+            <p class="discuss__q">Hva er de viktigste forskjellene mellom teokrati og demokrati? Bruk Iran til å vise at grensen ikke alltid er skarp.</p>
+            <p class="discuss__tip">Sammenlign hvem som har makten, hvor makten kommer fra, og hvordan folket kan kontrollere den.</p>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== KAPITTEL 7 ===== -->
+    <article class="view chapter" id="kap7" data-view data-title="Kapittel 7 · Demokratiet i polisene" aria-labelledby="kap7-tittel">
+      <div class="wrap chapter__grid">
+        <div class="chapter__plate">
+          <p class="chapter__num" aria-hidden="true">07</p>
+          <p class="kicker">Kapittel 7 · s. 44–49</p>
+          <h2 class="chapter__title" id="kap7-tittel">Demokratiet i polisene</h2>
+          <figure class="plate-figure plate-figure--narrow reveal">
+            <img src="bilder/ostraka.jpg" width="403" height="768" loading="lazy" decoding="async" alt="Tre brune potteskår med greske bokstaver risset inn.">
+            <figcaption>Potteskår, ostraka, med navn på politikere. Ved ostrakisme skrev borgerne navnet på den de ville vise ut av Aten. På det midterste skåret står navnet Kimon.</figcaption>
+          </figure>
+        </div>
+
+        <div class="chapter__body">
+          <figure class="quote reveal">
+            <blockquote><p>«Makt kan vokse hvis man deler på den.»</p></blockquote>
+            <figcaption>Historiker Mona Ringvej om det atenske demokratiet</figcaption>
+          </figure>
+
+          <h3 class="label">Kort fortalt</h3>
+          <p class="lede reveal">For 2500 år siden så de fleste herskere på folket som sin eiendom. I flere greske bystater, poliser, fikk borgerne i stedet stemme direkte over lover og krig. Aten fra 508 til 322 f.Kr. er det best kjente eksemplet. Men færre enn én av fem innbyggere var borgere.</p>
+
+          <h3 class="label">Hovedpunkter</h3>
+          <div class="points">
+            <section class="point reveal">
+              <h4>Polisene</h4>
+              <p>Nærmere tusen greske poliser lå rundt Middelhavet. En polis var en by med mur, omgitt av jordbruksland. Felles språk, kultur, religion og handel bandt dem sammen, men de kom ofte i konflikt om den knappe jorden.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Jern ga soldatene makt</h4>
+              <p>Fram til 700-tallet f.Kr. styrte aristokratene, de rikeste jordeierne, som betalte for hester, våpen og rustning. På 600-tallet f.Kr. ble jern bedre og billigere. Flere bønder kunne utruste seg selv som soldater og ble mindre avhengige av aristokratene. I falanksen kjempet de side om side, og lojaliteten flyttet seg til våpenbrødrene.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Solon og Kleistenes</h4>
+              <p>I 590-årene f.Kr. protesterte bondesoldatene med Solon i spissen. All gjeld ble strøket, og borgerne fikk rettigheter etter hvor mye jord de eide. I 508 f.Kr. gikk Kleistenes lenger: Han fjernet de graderte rettighetene, og alle borgere fikk delta i en folkeforsamling.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Perikles</h4>
+              <p>Den mest kjente strategen ble gjenvalgt 14 ganger. Han ga betaling for verv i rådet og juryene, så også fattige borgere hadde råd til å delta. En tale av Perikles er den eldste kjente kilden til ordet demokrati.</p>
+            </section>
+          </div>
+
+          <div class="system reveal">
+            <h3 class="label">Slik styrte borgerne Aten</h3>
+            <ol class="system__list">
+              <li><strong>Folkeforsamlingen</strong> Alle borgere kunne møte. Den samlet seg 40 ganger i året, alle kunne be om ordet, og de stemte ved å rekke opp hånden.</li>
+              <li><strong>Rådet på 500</strong> Femti borgere fra hvert av de ti områdene ble trukket ut ved loddtrekning. Rådet sto for det daglige styret og satt ett år om gangen.</li>
+              <li><strong>De ti strategene</strong> Valgt blant hærførerne. De hadde ansvar for forsvar og utenrikspolitikk og kunne gjenvelges.</li>
+              <li><strong>Domstolene</strong> En jury på minst 201 borgere avgjorde sakene med småstein i to krukker. Flertallet bestemte.</li>
+              <li><strong>Ostrakisme</strong> Hemmelig, skriftlig avstemning om å vise en borger ut av polisen.</li>
+            </ol>
+          </div>
+
+          <div class="table-wrap reveal">
+            <table class="types">
+              <caption>Var Aten et demokrati? Robert A. Dahls krav</caption>
+              <thead>
+                <tr><th scope="col">Krav</th><th scope="col">Slik var det i Aten</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Stemme- og ytringsfrihet for alle</th><td>Bare for voksne, frie menn med jord og røtter i polisen. Kvinner, slaver, innflyttere og unge var utestengt.</td></tr>
+                <tr><th scope="row">Mangfold av informasjonskilder</th><td>Alle borgere kunne ta ordet, men de med utdanning, status og trening i talekunst påvirket trolig mer enn andre.</td></tr>
+                <tr><th scope="row">Fri konkurranse om stemmene</th><td>Ingen partier, bare små grupper som byboere og landboere. Hver sak var i praksis en folkeavstemning.</td></tr>
+                <tr><th scope="row">Frie og rettferdige valg</th><td>Avstemning ved håndsopprekning, så alle så hva du stemte. Bare ved ostrakisme var avstemningen hemmelig.</td></tr>
+                <tr><th scope="row">Folkevalgt innflytelse</th><td>Svært stor: Borgerne bestemte direkte. Vervene varte som regel bare ett år.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <section class="point point--wide reveal">
+            <h4>Sammenlign med Norge</h4>
+            <p>Grunnloven fra 1814 ga heller ikke stemmerett til menn uten eiendom. Allmenn stemmerett for menn kom i 1898, og kvinner fikk stemmerett på lik linje med menn i 1913. Hvis Aten ikke var et demokrati, hva var da Norge før 1913?</p>
+          </section>
+
+          <aside class="contrast reveal" aria-labelledby="sparta-tittel">
+            <h3 id="sparta-tittel">Motbildet: Sparta <span class="label__src">fra undervisningen</span></h3>
+            <p>Sparta var en sterkt militarisert bystat. Gutter levde i kaserner fra de var 7 til 30 år. Borgerne kalte seg «de like», mens helotene, en undertrykt folkegruppe, måtte arbeide for dem. Sparta hadde to konger som først og fremst var hærførere, og en folkeforsamling med lite makt. Derfor regnes Sparta som et oligarki.</p>
+          </aside>
+
+          <div class="context reveal">
+            <div><h3>Før</h3><p>Jordbruksrevolusjon og de første sivilisasjonene. Stater ledet av prester og konger.</p></div>
+            <div><h3>Etter</h3><p>Føydalisme, Magna Charta, eneveldet, politiske revolusjoner, allmenn stemmerett og menneskerettigheter.</p></div>
+          </div>
+
+          <h3 class="label">Begreper</h3>
+          <ul class="chips" aria-label="Begreper i kapittel 7">
+            <li><a href="#begreper" data-term="Polis">polis</a></li>
+            <li><a href="#begreper" data-term="Aristokrati">aristokrati</a></li>
+            <li><a href="#begreper" data-term="Tyrann">tyrann</a></li>
+            <li><a href="#begreper" data-term="Falanks">falanks</a></li>
+            <li><a href="#begreper" data-term="Demos">demos</a></li>
+            <li><a href="#begreper" data-term="Direkte demokrati">direkte demokrati</a></li>
+            <li><a href="#begreper" data-term="Representativt demokrati">representativt demokrati</a></li>
+            <li><a href="#begreper" data-term="Strateg">strateg</a></li>
+            <li><a href="#begreper" data-term="Ostrakisme">ostrakisme</a></li>
+          </ul>
+
+          <aside class="discuss reveal" aria-label="Drøft">
+            <p class="discuss__kicker">Drøft</p>
+            <p class="discuss__q">Skal vi beundre eller fordømme det atenske demokratiet?</p>
+            <p class="discuss__tip">Vurder Aten både ut fra sin egen tid og ut fra Dahls krav. Pass på at du ikke bare dømmer fortiden med dagens briller.</p>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== KAPITTEL 8 ===== -->
+    <article class="view chapter" id="kap8" data-view data-title="Kapittel 8 · Fra myter til fornuft" aria-labelledby="kap8-tittel">
+      <div class="wrap chapter__grid">
+        <div class="chapter__plate">
+          <p class="chapter__num" aria-hidden="true">08</p>
+          <p class="kicker">Kapittel 8 · s. 50–55</p>
+          <h2 class="chapter__title" id="kap8-tittel">Fra mytologiske til rasjonelle forklaringer</h2>
+          <figure class="plate-figure reveal">
+            <img src="bilder/platon-aristoteles.jpg" width="804" height="1052" loading="lazy" decoding="async" alt="Utsnitt av et maleri: to skjeggete menn i lange kapper går side om side. Den ene peker opp, den andre holder hånden ut foran seg.">
+            <figcaption>Platon (til venstre) og Aristoteles. Utsnitt av freskoen «Skolen i Aten» av Rafael.</figcaption>
+          </figure>
+        </div>
+
+        <div class="chapter__body">
+          <figure class="quote reveal">
+            <blockquote><p>«Kunnskap er mat for sjelen.»</p></blockquote>
+            <figcaption>Platon i <cite>Georgias</cite></figcaption>
+          </figure>
+
+          <h3 class="label">Kort fortalt</h3>
+          <p class="lede reveal">«Hvis jeg har sett lenger enn andre, er det fordi jeg har stått på skuldrene til kjemper», skrev Isaac Newton i 1676. Noen av kjempene levde 2000 år før ham, i den greske antikken. Der begynte enkelte å lete etter forklaringer i naturen selv i stedet for hos gudene.</p>
+
+          <h3 class="label">Hovedpunkter</h3>
+          <div class="points">
+            <section class="point reveal">
+              <h4>Fra mythos til logos</h4>
+              <p>Grekerne forklarte verden med guder og skjebne, og de ofret for å få gudene på sin side. Noen begynte likevel å studere naturen og lete etter logiske årsaker, og de diskuterte forklaringene med andre. Denne overgangen kalles mythos–logos-overgangen. Måten å tenke på kalles filosofi, «kjærlighet til visdom».</p>
+            </section>
+            <section class="point reveal">
+              <h4>Skriftens rolle</h4>
+              <p>Rundt 800 f.Kr. fikk grekerne et forenklet alfabet med 20 tegn. Flere lærte å skrive, og tekster kunne lagres og leses av mange. En teori er at dette ga tankene friere tøyler.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Naturfilosofene</h4>
+              <p>Tales fra Milet (625–545 f.Kr.) mente at alt var laget av vann. Han tok feil, men han lette etter et prinsipp i naturen og ikke etter en gud. Demokrit (460–370 f.Kr.) mente alt besto av små, udelelige atomer. Pytagoras (ca. 570–500 f.Kr.) brukte tall: Summen av vinklene i en trekant er alltid 180 grader.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Lege og historiker</h4>
+              <p>Hippokrates og andre leger beskrev sykdom ut fra observasjoner, ikke som noe gudene bestemte. Herodot regnes som historiefagets far. Det greske ordet <i lang="grc-Latn">historia</i> betyr undersøkelse.</p>
+            </section>
+          </div>
+
+          <figure class="wide-figure reveal">
+            <img src="bilder/sokrates-dod.jpg" width="1400" height="531" loading="lazy" decoding="async" alt="Maleri av en eldre mann i hvitt som sitter på en seng og strekker hånden mot et beger, omgitt av sørgende menn.">
+            <figcaption>«Sokrates’ død», malt av Jacques-Louis David i 1787.</figcaption>
+          </figure>
+
+          <div class="points">
+            <section class="point reveal">
+              <h4>Sokrates</h4>
+              <p>Sokrates (ca. 470–399 f.Kr.) stilte spørsmål til folk i Atens gater: «Hvordan vet du at det du sier, er riktig?» Han mente de uvitende er farlige, og at den som tenker seg fram til hva som er rett, også gjør det rette. I 399 f.Kr. ble han dømt til døden for å forderve ungdommen og fornærme gudene.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Platon og Aristoteles</h4>
+              <p>Platon (427–347 f.Kr.) skrev ned dialogene til Sokrates. Han mente det vi sanser, bare er skygger av en evig, ideell verden, og at filosofene burde styre staten i stedet for folket. Eleven hans Aristoteles var opptatt av både likheter og forskjeller, og han begynte å ordne dyr og planter etter slektskap. Han mente også at mannen sto øverst.</p>
+            </section>
+            <section class="point reveal">
+              <h4>Hellenismen</h4>
+              <p>Aristoteles var lærer for Aleksander den store. Da Aleksander døde i 323 f.Kr., hadde han erobret et rike fra Indus til Middelhavet. Gresk kultur blandet seg med kunnskap fra øst, og blandingskulturen kalles hellenismen. Rundt 100 f.Kr. hadde biblioteket i Alexandria hundretusenvis av manuskripter.</p>
+            </section>
+          </div>
+
+          <div class="context reveal">
+            <div><h3>Før</h3><p>Jordbruksrevolusjonen. Greske poliser med demokratiske innslag.</p></div>
+            <div><h3>Etter</h3><p>Tre verdensreligioner. Renessansen, opplysningstiden, sekularisering og kunnskapssamfunnet.</p></div>
+          </div>
+
+          <h3 class="label">Begreper</h3>
+          <ul class="chips" aria-label="Begreper i kapittel 8">
+            <li><a href="#begreper" data-term="Mythos–logos-overgangen">mythos–logos-overgangen</a></li>
+            <li><a href="#begreper" data-term="Filosofi">filosofi</a></li>
+            <li><a href="#begreper" data-term="Naturfilosof">naturfilosof</a></li>
+            <li><a href="#begreper" data-term="Atom">atom</a></li>
+            <li><a href="#begreper" data-term="Sokratisk metode">sokratisk metode</a></li>
+            <li><a href="#begreper" data-term="Idélæren">idélæren</a></li>
+            <li><a href="#begreper" data-term="Hellenisme">hellenisme</a></li>
+          </ul>
+
+          <aside class="discuss reveal" aria-label="Drøft">
+            <p class="discuss__kicker">Drøft</p>
+            <p class="discuss__q">Hvorfor finnes det trolig en sammenheng mellom utviklingen av demokrati og utviklingen av filosofi?</p>
+            <p class="discuss__tip">Tenk på hva begge krever: åpen debatt, at mange kan delta, og at argumenter teller mer enn rang. Ta med at Sokrates likevel ble dømt til døden av sine medborgere.</p>
+          </aside>
+        </div>
+      </div>
+    </article>
+
+
     <!-- ===================== TIDSLINJE ===================== -->
-    <section class="section section--dark" id="tidslinje" aria-labelledby="tidslinje-tittel">
+    <section class="view section section--dark" id="tidslinje" data-view data-title="Tidslinje" aria-labelledby="tidslinje-tittel">
       <div class="wrap">
         <header class="section-head reveal">
           <p class="kicker kicker--light">03 · Tidslinje</p>
@@ -850,7 +888,7 @@
     </section>
 
     <!-- ===================== BEGREPER ===================== -->
-    <section class="section" id="begreper" aria-labelledby="begreper-tittel">
+    <section class="view section" id="begreper" data-view data-title="Begreper" aria-labelledby="begreper-tittel">
       <div class="wrap">
         <header class="section-head reveal">
           <p class="kicker">04 · Begreper</p>
@@ -886,7 +924,7 @@
     </section>
 
     <!-- ===================== QUIZ ===================== -->
-    <section class="section section--stone" id="quiz" aria-labelledby="quiz-tittel">
+    <section class="view section section--stone" id="quiz" data-view data-title="Quiz" aria-labelledby="quiz-tittel">
       <div class="wrap wrap--narrow">
         <header class="section-head reveal">
           <p class="kicker">05 · Quiz</p>
@@ -901,7 +939,7 @@
     </section>
 
     <!-- ===================== PRESENTASJON ===================== -->
-    <section class="section section--dark" id="presentasjon" aria-labelledby="presentasjon-tittel">
+    <section class="view section section--dark" id="presentasjon" data-view data-title="Presentasjon" aria-labelledby="presentasjon-tittel">
       <div class="wrap">
         <header class="section-head reveal">
           <p class="kicker kicker--light">06 · Presentasjon</p>
@@ -921,7 +959,7 @@
       <div>
         <p class="site-footer__brand">Fra jeger til filosof</p>
         <p>En repetisjonsside for historie, kapittel 3 til 8.</p>
-        <p><a href="#topp">Tilbake til toppen</a></p>
+        <p><a href="#forside">Til forsiden</a></p>
       </div>
       <div>
         <h2>Kilder</h2>

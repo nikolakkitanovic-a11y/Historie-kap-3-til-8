@@ -284,81 +284,175 @@
   ];
 
   /* =========================================================
-     MENY OG FREMDRIFT
+     MENY, VISNINGER OG FREMDRIFT
+     Én del vises om gangen. Adressen (#kap5 osv.) bestemmer hvilken,
+     så tilbakeknappen og lenker virker som vanlig.
      ========================================================= */
-  function initNav() {
+  var router = { go: function () {} };
+
+  function initRouter() {
     var nav = $('.site-nav');
     var toggle = $('.site-nav__toggle');
-    var hero = $('#topp');
+    var group = $('.site-nav__group');
+    var groupBtn = $('.site-nav__group-btn');
     var bar = $('.site-nav__progress span');
     var currentEl = $('[data-current]');
-    var links = $$('[data-nav]');
+    var hero = $('.hero');
+    var views = $$('[data-view]');
+    var byId = {};
+    views.forEach(function (v) { byId[v.id] = v; });
+    var order = views.map(function (v) { return v.id; });
+    var CHAPTERS = ['kap3', 'kap4', 'kap5', 'kap6', 'kap7', 'kap8'];
+    var mobile = window.matchMedia('(max-width: 939px)');
+    var current = null;
+    var ticking = false;
 
-    var sections = $$('main section[id], main article[id]').map(function (el) {
-      var isChapter = el.tagName === 'ARTICLE';
-      var key = isChapter ? 'kapitler' : el.id;
-      var link = $('[data-nav="' + key + '"]');
-      var label = isChapter ? el.getAttribute('data-label') : (link ? link.textContent : el.id);
-      return { el: el, key: key, label: label };
+    function titleOf(id) { return byId[id].getAttribute('data-title'); }
+
+    /* Kapittelvelger øverst i hvert kapittel */
+    CHAPTERS.forEach(function (id) {
+      var view = byId[id];
+      if (!view) return;
+      var holder = document.createElement('div');
+      holder.className = 'wrap';
+      holder.innerHTML = '<nav class="chapter-switch" aria-label="Bytt kapittel">' +
+        '<a class="chapter-switch__all" href="#kapitler">Alle kapitler</a><ol>' +
+        CHAPTERS.map(function (c) {
+          var n = c.slice(3);
+          return '<li><a href="#' + c + '" aria-label="Kapittel ' + n + '"' + (c === id ? ' aria-current="page"' : '') + '>' + n + '</a></li>';
+        }).join('') + '</ol></nav>';
+      view.insertBefore(holder, view.firstElementChild);
     });
 
-    var lastKey = null;
-    var lastLabel = null;
-    var ticking = false;
+    /* Forrige og neste nederst i hver del */
+    views.forEach(function (view, i) {
+      var prev = order[i - 1];
+      var next = order[i + 1];
+      var html = '<nav class="pager" aria-label="Forrige og neste del">' +
+        (prev ? '<a class="pager__prev" href="#' + prev + '"><small>Forrige</small><b>' + esc(titleOf(prev)) + '</b></a>' : '') +
+        (next ? '<a class="pager__next" href="#' + next + '"><small>Neste</small><b>' + esc(titleOf(next)) + '</b></a>' : '') +
+        '</nav>';
+      var target = view.id === 'forside' ? $('#velg > .wrap') : $(':scope > .wrap:last-child', view);
+      if (!target || view.tagName === 'ARTICLE') {
+        target = document.createElement('div');
+        target.className = 'wrap';
+        view.appendChild(target);
+      }
+      target.insertAdjacentHTML('beforeend', html);
+    });
+
+    function setGroup(open) {
+      group.classList.toggle('is-open', open);
+      groupBtn.setAttribute('aria-expanded', String(open));
+    }
+    function setMenu(open) {
+      nav.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      if (open && mobile.matches) setGroup(true);
+    }
+
+    toggle.addEventListener('click', function () {
+      setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    groupBtn.addEventListener('click', function () {
+      setGroup(!group.classList.contains('is-open'));
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) { setMenu(false); setGroup(false); }
+    });
+    document.addEventListener('click', function (e) {
+      if (nav.contains(e.target)) return;
+      if (nav.classList.contains('is-open')) setMenu(false);
+      if (group.classList.contains('is-open')) setGroup(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      if (group.classList.contains('is-open') && !mobile.matches) { setGroup(false); groupBtn.focus(); }
+      else if (nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
+    });
+
+    function markActive(id) {
+      var key = CHAPTERS.indexOf(id) !== -1 ? 'kapitler' : id;
+      $$('[data-nav]').forEach(function (el) {
+        var on = el.getAttribute('data-nav') === key;
+        if (el.tagName === 'BUTTON') el.classList.toggle('is-current', on);
+        else if (on) el.setAttribute('aria-current', 'page');
+        else el.removeAttribute('aria-current');
+      });
+      $$('[data-nav-sub]').forEach(function (a) {
+        if (a.getAttribute('data-nav-sub') === id) a.setAttribute('aria-current', 'page');
+        else a.removeAttribute('aria-current');
+      });
+      currentEl.textContent = titleOf(id);
+    }
+
+    function jumpTop() {
+      var root = document.documentElement;
+      var before = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      window.scrollTo(0, 0);
+      root.style.scrollBehavior = before;
+    }
 
     function update() {
       ticking = false;
       var y = window.scrollY || window.pageYOffset;
-      var heroEnd = hero.offsetHeight - nav.offsetHeight;
-      nav.classList.toggle('is-over-hero', y < heroEnd);
-
+      nav.classList.toggle('is-over-hero', current === 'forside' && y < hero.offsetHeight * 0.6);
       var max = document.documentElement.scrollHeight - window.innerHeight;
       bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
-
-      var line = window.innerHeight * 0.35;
-      var active = null;
-      for (var i = 0; i < sections.length; i++) {
-        if (sections[i].el.getBoundingClientRect().top <= line) active = sections[i];
-      }
-      var key = active ? active.key : null;
-      var label = active ? active.label : 'Forsiden';
-
-      if (key !== lastKey) {
-        links.forEach(function (a) {
-          if (a.getAttribute('data-nav') === key) a.setAttribute('aria-current', 'true');
-          else a.removeAttribute('aria-current');
-        });
-        lastKey = key;
-      }
-      if (label !== lastLabel) {
-        currentEl.textContent = label;
-        lastLabel = label;
-      }
     }
 
-    function requestUpdate() {
+    function show(id, opts) {
+      opts = opts || {};
+      var changed = id !== current;
+      if (changed) {
+        views.forEach(function (v) { v.hidden = v.id !== id; });
+        current = id;
+        markActive(id);
+        document.title = id === 'forside'
+          ? 'Fra jeger til filosof · Historie kapittel 3–8'
+          : titleOf(id) + ' · Fra jeger til filosof';
+      }
+      if (opts.target) {
+        if (changed) jumpTop();
+        opts.target.scrollIntoView({ behavior: changed ? 'auto' : scrollBehavior(), block: 'start' });
+      } else if (changed) {
+        jumpTop();
+      }
+      if (changed && opts.focus) {
+        var heading = $('h1, h2', byId[id]);
+        if (heading) {
+          heading.setAttribute('tabindex', '-1');
+          heading.focus({ preventScroll: true });
+        }
+      }
+      update();
+      document.dispatchEvent(new CustomEvent('viewchange', { detail: id }));
+    }
+
+    function resolve(focus) {
+      var id = decodeURIComponent((window.location.hash || '').slice(1));
+      if (!id) { show('forside', { focus: focus }); return; }
+      if (byId[id]) { show(id, { focus: focus }); return; }
+      var el = document.getElementById(id);
+      var view = el && el.closest('[data-view]');
+      if (view) { show(view.id, { target: el }); return; }
+      if (el) { if (!current) show('forside'); el.focus(); return; }
+      show('forside', { focus: focus });
+    }
+
+    router.go = function (id) {
+      if (window.location.hash === '#' + id) show(id, { focus: true });
+      else window.location.hash = id;
+    };
+    router.current = function () { return current; };
+
+    window.addEventListener('hashchange', function () { resolve(true); });
+    window.addEventListener('scroll', function () {
       if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
-    }
-
-    function setOpen(open) {
-      nav.classList.toggle('is-open', open);
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    }
-
-    toggle.addEventListener('click', function () {
-      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
-    });
-    links.forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && nav.classList.contains('is-open')) { setOpen(false); toggle.focus(); }
-    });
-    document.addEventListener('click', function (e) {
-      if (nav.classList.contains('is-open') && !nav.contains(e.target)) setOpen(false);
-    });
-
-    window.addEventListener('scroll', requestUpdate, { passive: true });
-    window.addEventListener('resize', requestUpdate);
-    update();
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    resolve(false);
   }
 
   /* =========================================================
@@ -382,7 +476,7 @@
   }
 
   function initParallax() {
-    var hero = $('#topp');
+    var hero = $('.hero');
     var layers = $$('.hero__layer');
     var content = $('.hero__content');
     var ticking = false;
@@ -410,6 +504,7 @@
       if (!ticking) { ticking = true; window.requestAnimationFrame(apply); }
     }, { passive: true });
     if (reduceMotion.addEventListener) reduceMotion.addEventListener('change', apply);
+    document.addEventListener('viewchange', apply);
     apply();
   }
 
@@ -582,10 +677,19 @@
       var target = items.filter(function (el) { return el.getAttribute('data-term') === name; })[0];
       if (!target) return;
       if (root.classList.contains('is-practice')) setRevealed(target, true);
-      target.scrollIntoView({ behavior: scrollBehavior(), block: 'center' });
-      target.focus({ preventScroll: true });
-      target.classList.add('is-flash');
-      window.setTimeout(function () { target.classList.remove('is-flash'); }, 1800);
+
+      function highlight() {
+        target.scrollIntoView({ behavior: 'auto', block: 'center' });
+        target.focus({ preventScroll: true });
+        target.classList.add('is-flash');
+        window.setTimeout(function () { target.classList.remove('is-flash'); }, 1800);
+      }
+      if (router.current() === 'begreper') { highlight(); return; }
+      document.addEventListener('viewchange', function once(ev) {
+        document.removeEventListener('viewchange', once);
+        if (ev.detail === 'begreper') highlight();
+      });
+      router.go('begreper');
     });
 
     apply();
@@ -913,7 +1017,7 @@
   }
 
   /* ---------- Start ---------- */
-  initNav();
+  initRouter();
   initReveal();
   initParallax();
   initTimeline();
